@@ -36,17 +36,44 @@ const About = () => {
                     <div className="tech-skills">
                         <h3>Tech Skills</h3>
                         <div className="language-logo">
-                            <img src="" alt="" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/python.svg" alt="python" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/java.svg" alt="java" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/c-plus-plus.svg" alt="cpp" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/react-javascript-js-framework-facebook.svg" alt="react" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/javascript.svg" alt="js" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/html-5.svg" alt="html" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/css-3.svg" alt="css" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/git.svg" alt="git" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/intellij-idea.svg" alt="intellij" />
+                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/vs-code.svg" alt="vs" />
                         </div>
                     </div>
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
-                    <p>React</p>
-                    <p>Python</p>
-                    <p>Java</p>
-                    <p>C++</p>
+                    <div className="language-skils">
+                        <ul>
+                            <li>English</li>
+                            <li>Sinhala</li>
+                        </ul>
+                    </div>
+                    <div className="other-skills">
+                        <ul>
+                            <li>HR Management</li>
+                            <li>Social Services</li>
+                            <li>Volunteering</li>
+                            <li>Leadership</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            <div className="about-4">
+                <h2>Experience</h2>
+                <ul>
+                    <li>Main coordinator of R2U workshop program 2022</li>
+                    <li>Former Vice secretary of Richmond College Scociel service society</li>
+                    <li>Member of Ephilogue'23 Logistic Commitee</li>
+                    <li>Member of IESL Student Branch, University of Moratuwa</li>
+                    <li>All island art competition participation</li>
+                    <li>Volunteer at Sasnaka Sansada Foundation</li>
+                </ul>
             </div>
         </div>
     );
