@@ -14,6 +14,12 @@ const Projects = () => {
                 <p>Required to develop a program to manage an online shopping system. The shopkeepers can login to the system and add new items and edit current items which are available in the shop. Customers can login to the system and track their current shopping cart. Backend is developed by Java and GUI is develop using JavaFX.</p>
                 <p className="project-git"><a href="https://github.com/vihanga02/Grocery_shop_System.git">Check this out!</a></p>
             </div>
+            <div className="dummy-project">
+                <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true" alt="dummy" />
+                <h2>Dummy Project</h2>
+                <p>This is a dummy project to test the web page</p>
+                <p><a>Check this out!</a></p>
+            </div>
         </div>
     );
 }
