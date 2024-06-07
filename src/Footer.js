@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <footer>
             <h3>Contact Me</h3>
-            <a href="vihagamuthumala@gmail.com"><img src="" alt="" /></a>
+            <a href="mailto:vihagamuthumala@gmail.com"><img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/74dbb67fedc5795ea9affc5d510e8caa382fd2bc/src/img/email-1572.svg" alt="mail" /><p>vihangamuthumala@gmail.com</p></a>
             <div className="social-links">
                 <a href="https://www.instagram.com/__vihanga__m__"><img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/2aafc96fba0c4863dd377e521fd9fedb344e6d08/src/img/instagram.svg" alt="ig-logo" /></a>
                 <a href="https://www.facebook.com/vihanga.muthumala.1/"><img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/2aafc96fba0c4863dd377e521fd9fedb344e6d08/src/img/fb.svg" alt="fb-logo" /></a>

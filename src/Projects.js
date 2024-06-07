@@ -1,7 +1,9 @@
 const Projects = () => {
     return (
         <div className="projects">
-            <p>aaaaaaaaaaaaaaaaaaa</p>
+            <div className="nano-processor">
+                <img src="" alt="" />
+            </div>
         </div>
     );
 }
