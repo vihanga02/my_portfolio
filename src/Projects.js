@@ -9,7 +9,10 @@ const Projects = () => {
                 <p className="project-git"><a href="https://github.com/vihanga02/Nano-Processor.git"></a>Check this out!</p>
             </div>
             <div className="grocery-shop">
-                <img src="" alt="" />
+                <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/benefits-supermarket-1024x683.jpg?raw=true" alt="market" />
+                <h2>POS System</h2>
+                <p>Required to develop a program to manage an online shopping system. The shopkeepers can login to the system and add new items and edit current items which are available in the shop. Customers can login to the system and track their current shopping cart. Backend is developed by Java and GUI is develop using JavaFX.</p>
+                <p className="project-git"><a href="https://github.com/vihanga02/Grocery_shop_System.git">Check this out!</a></p>
             </div>
         </div>
     );
