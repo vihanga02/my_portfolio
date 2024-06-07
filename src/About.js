@@ -36,7 +36,7 @@ const About = () => {
                     <div className="tech-skills">
                         <h3>Tech Skills</h3>
                         <div className="language-logo">
-                            img
+                            <img src="" alt="" />
                         </div>
                     </div>
                     <p>HTML</p>
