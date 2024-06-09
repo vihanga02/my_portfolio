@@ -1,43 +1,76 @@
 .home{
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
     z-index: -1;
-}
-
-.home .home-content #name{
-    color:rgb(0, 255, 0);
-    background: transparent;
-    font-size: 5rem;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-    position: relative;
-    top: -40rem;
-    left: 4rem;
-    text-shadow: 0.4rem 0.4rem 0rem rgba(36, 138, 10, 0.76);
+    width: 100%;
 }
 
 .home .home-content #name span{
-    color: aqua;
-    display: inline-block;
-    transform: rotate(-30deg);
-    position: relative;
-    left: 1rem;
+    color:rgba(240, 248, 255, 0.705);
+    font-size: 60%;
 }
-.home .home-content #developer-tag{
-    color: aqua;
+
+
+.home .home-content #name{
+    color:rgba(157, 255, 0, 0.884);
     background: transparent;
-    font-size: 3rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 300%;
+    font-family: Stencil Std, fantasy;
     position: relative;
-    top: -10rem;
-    left: 10rem;
+    top: -40rem;
+    left: 19%;
+    width: auto;
+
+}
+
+.home .home-content .developer-tag{
+    width: 100%;
+    background: transparent;
+    font-family: monospace , fantasy , cursive;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -13%;
+    top: -35rem;
+}
+
+.home .home-content .developer-tag #tag0{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    font-size: 400%;
+    height: 3rem;
+}
+
+.home .home-content .developer-tag #tag1{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    font-size: 500%;
+    height: 3.9rem;
+}
+
+.home .home-content .developer-tag #tag2{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.35);
+    position: relative;
+    font-size: 650%;
+    height: 5rem;
+}
+
+.home .home-content .developer-tag #tag3{
+    background: transparent;
+    color: rgb(255, 255, 255);
+    position: relative;
+    font-size: 800%;
 }
 
 .home .home-content img{
     position: relative;
     top: -5rem;
-    left:  58rem;
+    left:  60%;
     height: 50rem;
     width: auto;
 }
