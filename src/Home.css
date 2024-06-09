@@ -1,3 +1,11 @@
-.thumbs{
+.home .thumbs{
     display: flex;
+    flex-direction: row;
+}
+
+
+
+.home .thumbs svg{
+    fill: aquamarine;
+    height: 2rem;
 }

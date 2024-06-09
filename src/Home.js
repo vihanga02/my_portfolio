@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 const Home = () => {
     return (
         <div className="home">
             <div className="home-content">
-                <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/desktop-wallpaper-nillia-webdesign-web-development-management.jpg?raw=true" alt="developer-img" />
+                
                 <p id="name">Vihanga Muthumala</p>
                 <p id="developer-tag">&lt;Developer&gt;</p>
             </div>
@@ -23,7 +24,7 @@ const Home = () => {
                 </div>
                 <div className="contact-img">
                     <Link to="/my_portfolio/contact">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" id="contact"><path fill="none" d="M0 0h48v48H0z"></path><path d="M42 16v-2l-6 4-6-4v2l6 4 6-4zm2-10H4c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h40c2.21 0 3.98-1.79 3.98-4L48 10c0-2.21-1.79-4-4-4zm-28 6c3.31 0 6 2.69 6 6 0 3.32-2.69 6-6 6s-6-2.68-6-6c0-3.31 2.69-6 6-6zm12 24H4v-2c0-4 8-6.2 12-6.2S28 30 28 34v2zm16-12H28V12h16v12z"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" id="contact"><path fill="none" d="M0 0h48v48H0z"></path><path d="M42 16v-2l-6 4-6-4v2l6 4 6-4zm2-10H4c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h40c2.21 0 3.98-1.79 3.98-4L48 10c0-2.21-1.79-4-4-4zm-28 6c3.31 0 6 2.69 6 6 0 3.32-2.69 6-6 6s-6-2.68-6-6c0-3.31 2.69-6 6-6zm12 24H4v-2c0-4 8-6.2 12-6.2S28 30 28 34v2zm16-12H28V12h16v12z"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
                         <p>Go to Contacts</p>
                     </Link>
                 </div>
