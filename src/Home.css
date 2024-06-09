@@ -5,20 +5,21 @@
 }
 
 .home .home-content #name span{
-    color:rgba(240, 248, 255, 0.705);
-    font-size: 60%;
+    color:rgba(240, 248, 255, 0.452);
+    margin-right: 1.3vw;
+    font-size: 3vw;
 }
 
 
 .home .home-content #name{
-    color:rgba(157, 255, 0, 0.884);
+    color:rgb(157, 255, 0);
     background: transparent;
-    font-size: 300%;
+    font-size: 5vw;
     font-family: Stencil Std, fantasy;
-    position: relative;
-    top: -40rem;
-    left: 19%;
-    width: auto;
+    position: absolute;
+    top: 10vw;
+    left: 26vw;
+    width: 24vw;
 
 }
 
@@ -31,56 +32,79 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: -13%;
-    top: -35rem;
+    position: absolute;
+    left: -13vw;
+    top: 25vw;
 }
 
 .home .home-content .developer-tag #tag0{
     background: transparent;
     color: rgba(255, 255, 255, 0.1);
     position: relative;
-    font-size: 400%;
-    height: 3rem;
+    font-size: 4vw;
+    height: 2.6vw;
 }
 
 .home .home-content .developer-tag #tag1{
     background: transparent;
     color: rgba(255, 255, 255, 0.2);
     position: relative;
-    font-size: 500%;
-    height: 3.9rem;
+    font-size: 5.5vw;
+    height: 3.7vw;
 }
 
 .home .home-content .developer-tag #tag2{
     background: transparent;
     color: rgba(255, 255, 255, 0.35);
     position: relative;
-    font-size: 650%;
-    height: 5rem;
+    font-size: 7vw;
+    height: 4.7vw;
 }
 
 .home .home-content .developer-tag #tag3{
     background: transparent;
     color: rgb(255, 255, 255);
     position: relative;
-    font-size: 800%;
+    font-size: 9vw;
 }
 
 .home .home-content img{
     position: relative;
-    top: -5rem;
-    left:  60%;
-    height: 50rem;
+    top: 5vw;
+    left:  70vw;
+    height: 44vw;
     width: auto;
 }
 
-.home .thumbs{
+svg{
+    height: 5rem;
+}
+/* .home .thumbs{
+    position: absolute;
+    top: 60vw;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .home .thumbs  .thumb-in .thumb-link{
+    display: flex;
+    flex-direction: column;
 }
 
-.home .thumbs svg{
-    fill: aquamarine;
-    height: 2rem;
+.home .thumbs .thumb-in .thumb-svg-1{
+    fill: rgba(157, 255, 0, 0.274);
+    stroke: rgb(255, 255, 255);
+    height: 15vw;
+} */
+
+/* .home .thumbs .thumb-in .thumb-svg-1-1{
+    fill: rgb(15, 58, 122);
+    background:none;
+} */
+
+
+@media (max-width: 425px){
+
 }
