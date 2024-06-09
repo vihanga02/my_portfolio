@@ -5,9 +5,10 @@ const Home = () => {
     return (
         <div className="home">
             <div className="home-content">
-                
-                <p id="name">Vihanga Muthumala</p>
+                <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/Picsart_24-06-09_11-34-03-523.png?raw=true" alt="me" />
                 <p id="developer-tag">&lt;Developer&gt;</p>
+                <p id="name">Vihanga .<span> Muthu</span> + mala</p>
+                
             </div>
             <div className="thumbs">
                 <div className="about-me-img">
