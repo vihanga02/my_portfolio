@@ -1,8 +1,11 @@
+import './About.css';
+import React from 'react';
+
 const About = () => {
     return (
         <div className="about-content">
             <h1>About Me</h1>
-            <div className="about-1">
+            <div className="about-1 about">
                 <h2>Hi there,</h2>
                 <p>
                 I am a 22-year-old passionate developer from Galle, Sri Lanka. I am currently studying web development and app backend development.  I love to learn new things and do my best at anything that I do.
@@ -11,26 +14,31 @@ const About = () => {
                 In my free time, I love to travel with my friends and play cricket and football. I love to do new projects and gain knowledge and experience. So feel free to drop me a message.
                 </p>
             </div>
-            <div className="about-2">
+            <div className="about-2 about">
                 <h2>Education</h2>
                 <div className="school">
                     <p className="time">2008-2021</p>
                     <p className="institute"><a href="https://www.richmondcollege.lk/">Richmond College</a></p>
                     <div className="exams">
-                        <p className="passes">3 pasees</p>
-                        <p>2021 Advanced Level (Physical Science).</p>
-                        <p>Island Rank: 14</p>
-                        <p className="passes">9A passes.</p>
-                        <p>2028 Ordinary Level</p>
+                        <div>
+                            <p className="passes">3 pasees</p>
+                            <p>2021 Advanced Level (Physical Science).</p>
+                            <p>Island Rank: 14</p>
+                        </div>
+                        <div>
+                            <p className="passes">9A passes.</p>
+                            <p>2028 Ordinary Level</p>
+                        </div>
+                        
                     </div>
                 </div>
                 <div className="university">
                     <p className="time">since-2023</p>
                     <p className="institute"><a href="https://uom.lk/">University of Moratuwa</a></p>
-                    <p className="degree">BSc (hons) in Computer Science and Engineering.</p>
+                    <p className="degree">BSc (hons) in Computer Science and Engineering</p>
                 </div>
             </div>
-            <div className="about-3">
+            <div className="about-3 about">
                 <h2>Skills</h2>
                 <div className="skills">
                     <div className="tech-skills">
@@ -49,12 +57,14 @@ const About = () => {
                         </div>
                     </div>
                     <div className="language-skils">
+                        <h3>Language Skills</h3>
                         <ul>
                             <li>English</li>
                             <li>Sinhala</li>
                         </ul>
                     </div>
                     <div className="other-skills">
+                        <h3>Other Skills</h3>
                         <ul>
                             <li>HR Management</li>
                             <li>Social Services</li>
@@ -64,7 +74,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="about-4">
+            <div className="about-4 about">
                 <h2>Experience</h2>
                 <ul>
                     <li>Main coordinator of R2U workshop program 2022</li>

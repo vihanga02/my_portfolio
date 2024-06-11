@@ -3,20 +3,38 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
-    height: 10vw;
+    color: rgba(240, 248, 255, 0.815);
+    background-color: rgb(13, 9, 29);
     position: relative;
-    top: 50vw;
+    top: 1vw;
+    row-gap: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+}
+
+footer h3{
+    color: rgba(255, 255, 255, 0.733);
+    background: transparent;
 }
 
 footer .social-links{
     display: flex;
     flex-direction: row;
-    justify-content: center;  
+    justify-content: center;
+    column-gap: 2vw;
+    background: transparent;
 }
 
 footer a svg{
     fill: aliceblue;
-    height: 2rem;
-    width: 2rem;
+    height: 3vw;
+    width: auto;
+}
+
+footer a svg:hover{
+    fill: rgb(160, 255, 0);
+}
+
+footer p{
+    background: transparent;
 }

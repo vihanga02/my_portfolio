@@ -2,3 +2,9 @@
     background-color: rgb(1, 6, 20);
     margin: 0rem;
 }
+
+html, body, #root, .App {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
