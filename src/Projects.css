@@ -5,7 +5,7 @@
 .projects{
     color: aliceblue;
     position: relative;
-    top: 3vw;
+    top: 39vw;
     display: flex;
     flex-direction: column;
     row-gap: 4vw;
@@ -24,35 +24,30 @@
 .projects .nano-processor, .projects .grocery-shop, .projects .dummy-project{
     display: flex;
     flex-direction: row;
-    width: 75%;
-    height: 30vw;
+    width: 65%;
+    height: 20vw;
     column-gap: 4vw;
-    background-color: rgb(20, 56, 134);
+    background-color: rgb(3, 16, 46);
+    border-radius: 0vw 1vw 1vw 0vw;
     padding: 1.5vw;
+    padding-left: 0vw;
 }
 
-.projects .nano-processor img{
-    background-color: aliceblue;
-
-}
 .projects .grocery-shop{
     position: relative;
-    right: -25vw;
-
+    right: -23.3vw;
+    padding-left: 1.5vw;
+    padding-right: 0vw;
+    border-radius: 1vw 0vw 0vw 1vw;
 }
 
-.projects .grocery-shop img{
-    width: 40vw;
-    height: 30vw;
+.projects .grocery-shop img, .projects .dummy-project img, .projects .nano-processor img{
+    width: 30vw;
+    height: auto;
 }
 
 .projects .dummy-project div{
     width: 100%;
-}
-
-.projects .dummy-project img{
-    width: 40vw;
-    height: auto;
 }
 
 .projects div div h2{
@@ -61,4 +56,17 @@
     color: rgba(255, 255, 255, 0.863);
     font-weight: 100;
     margin-bottom: 2vw;
+}
+
+.projects .project-content p{
+    font-size: 1.3vw;
+    font-family: cursive;
+    color: rgba(255, 255, 255, 0.863);
+    font-weight: 100;
+    height: 50%;
+    overflow-y: scroll;
+}
+
+.projects .project-content .project-git{
+    
 }

@@ -8,3 +8,12 @@ html, body, #root, .App {
     margin: 0;
     padding: 0;
   }
+
+*::-webkit-scrollbar{
+    width: 0.8vw;
+    height: 0.8vw;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(179, 255, 0);
+}

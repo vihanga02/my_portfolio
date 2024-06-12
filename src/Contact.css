@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 4vw;
+    position: relative;
+    top: 45vw;
     width: 99vw;
     color: aliceblue;
 }
