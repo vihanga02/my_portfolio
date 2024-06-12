@@ -17,7 +17,7 @@ nav .links{
     display: flex;
     width: 70%;
     font-size: 1.4vw;
-    column-rule-width: 10px solid white;
+    justify-content: center;
 }
 
 nav .links a{
@@ -27,7 +27,8 @@ nav .links a{
     padding-top: 1%;
     text-decoration: none;
     color: rgba(240, 248, 255, 0.671);
-    background: linear-gradient(90deg, rgb(2, 1, 32) ,rgb(1, 21, 41), rgb(2, 1, 32));
+    background: linear-gradient(90deg, rgb(1, 0, 26) ,rgb(1, 21, 41));
+    border-right: 0.1vw solid white;
 }
 
 nav .links a:hover{

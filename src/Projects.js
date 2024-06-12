@@ -1,9 +1,16 @@
 import './Projects.css';
+import React, {useState} from 'react';
 
 const Projects = () => {
+    const [showAll, setShowAll] = useState(false);
+
+    const handleViewMore = () => {
+        setShowAll(!showAll);
+    }
+
     return (
         <div className="projects">
-            <h1>Projects</h1>
+            <h1><span>Pro</span>jects</h1>
             <div className="nano-processor">
                 <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/basys-3-0.png?raw=true" alt="board" />
                 <div className="project-content">
@@ -20,14 +27,27 @@ const Projects = () => {
                 </div>
                 <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/benefits-supermarket-1024x683.jpg?raw=true" alt="market" />
             </div>
-            <div className="dummy-project">
-                <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true" alt="dummy" />
-                <div className="project-content">
-                    <h2>Dummy Project</h2>
-                    <p>This is a dummy project to test the web page</p>
-                    <p className="project-git"><a>Check this out!</a></p>
-                </div>          
-            </div>
+            {showAll && (
+                <div className="view-more-div">
+                    <div className="dummy-project">
+                        <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true" alt="dummy" />
+                        <div className="project-content">
+                            <h2>Dummy Project</h2>
+                            <p>This is a dummy project to test the web page. I add this for increase the number of project divs in this page to testing purpuse. In future i will add more frojects to this section and remove this dummy projects.I hope now you know enough about this now. Enjoy my page.</p>
+                            <p className="project-git"><a>Check this out!</a></p>
+                        </div>         
+                    </div> 
+                    <div className='view-more-less'>
+                        <button onClick={handleViewMore} className='view-less-button'>View Less</button>
+                    </div>     
+                </div>
+            )}
+            {!showAll && (
+                <div className="view-more-less">
+                    <button onClick={handleViewMore} className='view-more-button'>View More</button>
+                </div>
+            )}
+            
         </div>
     );
 }

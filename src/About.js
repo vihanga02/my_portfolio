@@ -4,7 +4,7 @@ import React from 'react';
 const About = () => {
     return (
         <div className="about-content">
-            <h1>About Me</h1>
+            <h1>About <span>Me</span></h1>
             <div className="about-1 about">
                 <h2>Hi there,</h2>
                 <p>

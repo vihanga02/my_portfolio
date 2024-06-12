@@ -8,7 +8,7 @@
 .about-content{
     color: aliceblue;
     padding: 3vw;
-    height: 80vw;
+    height: 65vw;
     position: relative;
     top: 10vw;
 }
@@ -24,12 +24,17 @@
     top: 1vw;
 }
 
+.about-content h1 span{
+    color: rgb(166, 255, 0);
+
+}
+
 .about-content .about{
     padding: 1vw;
     border-radius: 1vw;
     width: 40vw;
     box-shadow: 1vw 1vw 0vw rgba(2, 39, 1, 0.5);
-    background-color: rgb(1, 1, 27);
+    background-color: rgb(3, 16, 46);
 }
 
 .about-content .about:hover{
@@ -54,7 +59,7 @@
 
 .about-content .about-1{
     position: relative;
-    top: 4vw;
+    top: 3vw;
 }
 
 .about-content .about-1 p{
@@ -63,7 +68,7 @@
 
 .about-content .about-2{
     position: relative;
-    top: -1vw;
+    top: -8vw;
     left: 50vw;
 }
 
@@ -119,7 +124,7 @@
 
 .about-content .about-3{
     position: relative;
-    top: -7vw;
+    top: -15vw;
 }
 
 
@@ -148,7 +153,7 @@
 }
 .about-content .about-4{
     position: relative;
-    top: -14vw;
+    top: -32vw;
     left: 50vw;
 }
 
