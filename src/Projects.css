@@ -81,7 +81,8 @@
     padding: 0.6vw;
     border: 0.1vw solid rgb(179, 255, 0);
     height: auto;
-    width: 10.68vw;
+    width: 11vw;
+    text-align: center;
 }
 
 .projects .project-git a{
@@ -97,4 +98,44 @@
 
 .projects .project-git a:hover{
     color: rgb(0, 225, 255);
+}
+
+.projects .view-more-less-button{
+    color:rgb(255, 255, 255);
+    border: 0vw;
+    background-color: transparent;
+    font-size: 1.5vw;
+    position: relative;
+    top: -1vw;
+    left: 45vw;
+}
+
+.projects .view-more-less-button:hover{
+    color: rgb(179, 255, 0);
+}
+
+.projects .view-more-less svg{
+    fill: rgb(255, 255, 255);
+    position: relative;
+    top: 0.2vw;
+    left: 0.5vw;
+    scale: 1.5;
+}
+
+.projects .view-more-less svg:hover{
+    fill: rgb(179, 255, 0);
+}
+
+.projects .less-button{
+    position: relative;
+    top: 2vw;
+}
+
+.projects .less-button svg{
+    fill: rgb(255, 255, 255);
+    position: relative;
+    top: 0.2vw;
+    left: 0.5vw;
+    scale: 1.5;
+    transform: rotate(180deg);
 }
