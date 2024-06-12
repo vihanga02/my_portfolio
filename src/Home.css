@@ -79,31 +79,10 @@
 svg{
     height: 5rem;
 }
-/* .home .thumbs{
-    position: absolute;
-    top: 60vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} */
 
-/* .home .thumbs  .thumb-in .thumb-link{
-    display: flex;
-    flex-direction: column;
+.home .thumbs div img{
+    height: 9vw;
 }
-
-.home .thumbs .thumb-in .thumb-svg-1{
-    fill: rgba(157, 255, 0, 0.274);
-    stroke: rgb(255, 255, 255);
-    height: 15vw;
-} */
-
-/* .home .thumbs .thumb-in .thumb-svg-1-1{
-    fill: rgb(15, 58, 122);
-    background:none;
-} */
-
 
 @media (max-width: 425px){
 
