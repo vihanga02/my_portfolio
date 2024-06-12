@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lilita+One&family=Spicy+Rice&display=swap');
 
+*:not(body){
+    background-color: transparent;
+}
+
 .about-content{
     color: aliceblue;
     padding: 3vw;
@@ -37,7 +41,6 @@
     font-weight: 100;
     margin-bottom: 1vw;
     letter-spacing: 0.3vw;
-    background: transparent;
 }
 
 .about-content .about p , .about-content .about li {
@@ -45,7 +48,6 @@
     font-family: cursive;
     color: rgba(255, 255, 255, 0.863);
     font-weight: 100;
-    background: transparent;
 }
 
 .about-content .about-1{
@@ -63,9 +65,7 @@
     left: 50vw;
 }
 
-.about-content .about-2 .school{
-    background: transparent;
-}
+
 
 .about-content .about-2 .time{
     font-family:'Courier New', Courier, monospace;
@@ -78,19 +78,13 @@
     font-family: "Archivo Black", sans-serif;
     position: relative;
     top: -0.8vw;
-    background: transparent;
     margin: 0vw;
 }
 .about-content .about-2 .exams div{
     position: relative;
     top: -1vw;
     left: 2vw;
-    background: transparent;
     height: 5vw;
-}
-
-.about-content .about-2 .exams{
-    background: transparent;
 }
 
 .about-content .about-2 .exams p{
@@ -100,7 +94,6 @@
     position: relative;
     top: -2vw;
     left: 0.2vw;
-    background: transparent;
 }
 
 .about-content .about-2 .exams div::before{
@@ -115,39 +108,28 @@
 .about-content .about-2 .university{
     position: relative;
     top: -1vw;
-    background: transparent;
 }
 
 .about-content .about-2 .university .degree{
     position: relative;
     top: -1.5vw;
     left: 10.5vw;
-    background: transparent;
 }
 
 .about-content .about-3{
     position: relative;
     top: -7vw;
 }
-.about-content .about-3 .skills{
-    background: transparent;
 
-}
 
 .about-content .about-3 .skills div{
     position: relative;
     left: 1vw;
     margin-bottom: 1vw;
-    background: transparent;
-}
-
-.about-content .about-3 .skills div ul{
-    background: transparent;
 }
 
 .about-content .about-3 .skills .tech-skills .language-logo img{
     max-width: 5vw;
-    background: transparent;
 }
 
 .about-content .about-3 .skills .tech-skills .language-logo{
@@ -158,12 +140,10 @@
     position: relative;
     left: 2vw;
     padding-top: 1vw;
-    background: transparent;
 }
 
 .about-content .about-3 h3{
     color: rgba(255, 255, 255, 0.589);
-    background: transparent;
 }
 .about-content .about-4{
     position: relative;
@@ -171,12 +151,6 @@
     left: 50vw;
 }
 
-.about-content .about-4 ul{
-    background: transparent;
-}
-
-
 .about-content .about-4 ul li{
     padding-bottom: 1vw;
-    background: transparent;
 }
