@@ -22,10 +22,10 @@
     font-size: 5vw;
     font-family: Stencil Std, fantasy;
     position: absolute;
-    top: 10vw;
-    left: 26vw;
-    width: 24vw;
-
+    top: 35vw;
+    left: 0vw;
+    width: 99vw;
+    z-index: -1;
 }
 
 .home .home-content .developer-tag{
@@ -39,7 +39,7 @@
     align-items: center;
     position: absolute;
     left: -13vw;
-    top: 25vw;
+    top: 8vw;
 }
 
 .home .home-content .developer-tag #tag0{
@@ -75,67 +75,10 @@
 
 .home .home-content img{
     position: relative;
-    top: 5vw;
-    left:  70vw;
+    top: 3vw;
+    left:  68vw;
     height: 44vw;
     width: auto;
-}
-
-.home .thumbs{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 4vw;
-    background-color: #010005;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-}
-
-.home .thumbs div{
-    background-color: #0e1647c7;
-    border-radius: 1vw;
-    padding: 0.4vw;
-}
-
-.home .thumbs div img{
-    height: 18vw;
-}
-
-.home .thumbs div div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 0.5vw;
-    padding: 0vw;
-    background: transparent;
-}
-
-.home .thumbs div svg{
-    height: 3.1vw;
-    fill: #9dff00;
-}
-
-.home .thumbs .thumb-link{
-    text-decoration: none;
-}
-
-.home .thumbs div a div p{
-    text-decoration: none;
-    font-family: Tiny5;
-    font-size: 2.4vw;
-    color: rgba(240, 248, 255, 0.637);
-}
-
-.home .thumbs div:hover{
-    background-color: #9dff00;
-}
-
-.home .thumbs div:hover p{
-    color: #010005;
-}
-
-.home .thumbs div:hover svg{
-    fill: #010005;
 }
 
 @media (max-width: 425px){
