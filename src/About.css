@@ -60,6 +60,7 @@
 .about-content .about-1{
     position: relative;
     top: 3vw;
+    left: 1vw;
 }
 
 .about-content .about-1 p{
@@ -68,8 +69,8 @@
 
 .about-content .about-2{
     position: relative;
-    top: -8vw;
-    left: 50vw;
+    top: -9vw;
+    left: 49vw;
 }
 
 .about-content .about-2 .time{
@@ -124,7 +125,8 @@
 
 .about-content .about-3{
     position: relative;
-    top: -15vw;
+    top: -19vw;
+    left: 1vw;
 }
 
 
@@ -153,8 +155,8 @@
 }
 .about-content .about-4{
     position: relative;
-    top: -32vw;
-    left: 50vw;
+    top: -36vw;
+    left: 49vw;
 }
 
 .about-content .about-4 ul li{

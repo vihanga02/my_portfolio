@@ -1,40 +1,48 @@
 nav{
     height: 2.5vw;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    column-gap: 45%;
+    width: 50vw;
     background: linear-gradient(90deg, rgba(18, 13, 41, 0.705) 50% , rgb(1, 23, 43));
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0vw;
+    left: 2.5vw;
     z-index: 1;
-    
 }
 
 nav .links{
     background-color: transparent;
-    display: flex;
-    width: 70%;
+    width: 100%;
     font-size: 1.4vw;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
 nav .links a{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    height: 2vw;
     width: 100%;
-    padding-top: 1%;
+    padding-top: 0.5vw;
     text-decoration: none;
     color: rgba(240, 248, 255, 0.671);
-    background: linear-gradient(90deg, rgb(1, 0, 26) ,rgb(1, 21, 41));
-    border-right: 0.1vw solid white;
 }
 
-nav .links a:hover{
+nav div a:hover{
     color: rgba(168, 255, 7, 0.842);
     background-color: rgba(4, 15, 44, 0.842);
     border-bottom: 0.1rem solid rgb(166, 255, 0);
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+}
+
+.nav-div svg{
+    fill: aliceblue;
+    height: 2.5vw;
+    width: 2.5vw;
+    position: fixed;
+    top: 0vw;
+    left: 0.1vw;
+    z-index: 2;
+}
+
+.nav-div svg:hover{
+    fill: rgb(168, 255, 7);
 }
