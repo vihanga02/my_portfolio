@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Archivo+Black&family=Black+Ops+One&family=Passion+One:wght@400;700;900&family=Righteous&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Passion+One:wght@400;700;900&family=Righteous&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Archivo+Black&family=Passion+One:wght@400;700;900&family=Righteous&family=Spicy+Rice&display=swap');
+
 *:not(body){
     background-color: transparent;
 }
@@ -14,7 +20,7 @@
 .projects h1{
     text-align: center;
     font-size: 4.5vw;
-    font-family: Marker Felt, sans-serif;
+    font-family: "Black Ops One", cursive;
     font-weight: 900;
     color: rgba(240, 248, 255, 0.774);
     margin-bottom: 2vw;
@@ -56,7 +62,7 @@
 
 .projects div div h2{
     font-size: 3vw;
-    font-family: "Lilita One";
+    font-family: "Spicy Rice", cursive;
     color: rgba(255, 255, 255, 0.863);
     font-weight: 100;
     margin-bottom: 2vw;
@@ -64,7 +70,7 @@
 
 .projects .project-content p{
     font-size: 1.3vw;
-    font-family: cursive;
+    font-family:"Antic Slab", serif;
     color: rgba(255, 255, 255, 0.863);
     font-weight: 100;
     height: 50%;

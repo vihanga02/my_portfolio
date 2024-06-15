@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
 .home{
     color: aliceblue;
@@ -16,16 +16,23 @@
 }
 
 
-.home .home-content #name{
-    color:#9dff00;
+.home .home-content .name{
+    color:#ffffff94;
     background: transparent;
-    font-size: 5vw;
-    font-family: Stencil Std, fantasy;
+    font-size: 8vw;
+    font-family: "Saira Stencil One", cursive;
     position: absolute;
-    top: 35vw;
+    top: 33vw;
     left: 0vw;
-    width: 99vw;
+    width: auto;
+    height: 7vw;
     z-index: -1;
+    white-space: nowrap;
+    display: flex;
+}
+
+.home .home-content .name span span{
+    color:rgb(166, 255, 0)
 }
 
 .home .home-content .developer-tag{

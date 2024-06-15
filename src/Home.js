@@ -1,5 +1,6 @@
 import "./Home.css";
 import { motion } from "framer-motion";
+import ParallaxText from './ScrollTemp.tsx';
 
 const Home = () => {
     return (
@@ -12,9 +13,7 @@ const Home = () => {
                     <p id="tag2">&lt;Developer&gt;</p>
                     <p id="tag3">&lt;Developer&gt;</p>
                 </div>
-                <p id="name">
-                    <span> I am</span>Vihanga  Muthumala
-                </p>
+                <ParallaxText  baseVelocity={5}><div> I'm<span>VIHANGA MUTHUMALA </span></div></ParallaxText>
             </div>
         </div>
     )

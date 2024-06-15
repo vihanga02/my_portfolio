@@ -3,6 +3,7 @@ nav{
     width: 50vw;
     background: linear-gradient(90deg, rgba(18, 13, 41, 0.705) 50% , rgb(1, 23, 43));
     position: fixed;
+    border-radius: 1vw;
     top: 0vw;
     left: 2.5vw;
     z-index: 1;
