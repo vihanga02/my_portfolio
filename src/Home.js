@@ -13,7 +13,7 @@ const Home = () => {
                     <p id="tag2">&lt;Developer&gt;</p>
                     <p id="tag3">&lt;Developer&gt;</p>
                 </div>
-                <ParallaxText  baseVelocity={30}>I'm<span>VIHANGA MUTHUMALA </span></ParallaxText>
+                <ParallaxText  baseVelocity={10}>I'm<span>VIHANGA MUTHUMALA </span></ParallaxText>
             </div>
         </div>
     )

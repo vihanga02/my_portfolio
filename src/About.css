@@ -17,31 +17,26 @@
 }
 
 .about-content h1{
-    font-size: 4.5vw;
+    font-size: 6vw;
     font-family: "Black Ops One", cursive;
     font-weight: 900;
-    color: rgba(240, 248, 255, 0.774);
+    color: rgb(240, 248, 255);
     margin-bottom: 1vw;
     text-align: center;
     position: relative;
     top: 1vw;
+    overflow: hidden;
 }
 
 .about-content h1 span{
     color: rgb(166, 255, 0);
-
 }
 
 .about-content .about{
-    padding: 1vw;
     border-radius: 1vw;
     width: 40vw;
-    box-shadow: 1vw 1vw 0vw rgba(2, 39, 1, 0.5);
-    background-color: rgb(3, 16, 46);
-}
-
-.about-content .about:hover{
-    background-color: rgb(13, 5, 61);
+    text-align: justify;
+    padding: 1vw;
 }
 
 .about-content .about h2{
@@ -63,17 +58,19 @@
 .about-content .about-1{
     position: relative;
     top: 3vw;
-    left: 1vw;
+    left: 4vw;
 }
 
 .about-content .about-1 p{
     text-indent: 4vw;
+    padding-left: 3vw;
+    width: 85%
 }
 
 .about-content .about-2{
     position: relative;
-    top: -9vw;
-    left: 49vw;
+    top: -13vw;
+    left: 46vw;
 }
 
 .about-content .about-2 .time{
@@ -133,8 +130,8 @@
 
 .about-content .about-3{
     position: relative;
-    top: -19vw;
-    left: 1vw;
+    top: -23vw;
+    left: 4vw;
 }
 
 
@@ -142,6 +139,10 @@
     position: relative;
     left: 1vw;
     margin-bottom: 1vw;
+}
+
+.about-content .about-3 .skills .tech-skills .language-logo{
+    padding: 0vw;
 }
 
 .about-content .about-3 .skills .tech-skills .language-logo img{
@@ -160,11 +161,18 @@
 
 .about-content .about-3 h3{
     color: rgba(255, 255, 255, 0.589);
+    padding-bottom: 1vw;
 }
+
+
 .about-content .about-4{
     position: relative;
-    top: -36vw;
-    left: 49vw;
+    top: -48vw;
+    left: 46vw;
+}
+
+.about-content .about-4 ul{
+    margin-left: 1vw;
 }
 
 .about-content .about-4 ul li{

@@ -1,11 +1,48 @@
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer'
 import './About.css';
 import React from 'react';
+import { type } from '@testing-library/user-event/dist/type';
+
+const aboutScale = {
+    hidden: {
+        opacity: 0.5,
+        y: 400
+    },
+    visible: {
+        opacity: 0.75,
+        scale: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            type: 'tween'
+        }
+    },
+    hover: {
+        scale: 1.1,
+        opacity: 1,
+        zIndex: 10,
+        backgroundColor: 'rgb(22, 24, 41)',
+        boxShadow: "0px 0px 8px rgb(255,255,255)",
+        transition: {
+            duration: 0.3,
+        },
+    }
+}
 
 const About = () => {
+
     return (
         <div className="about-content">
-            <h1>About <span>Me</span></h1>
-            <div className="about-1 about">
+            <h1>AB<span>OUT </span></h1>
+            <motion.div  className="about-1 about"
+                variants={aboutScale}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{once: true}}
+                whileHover= 'hover'
+            >
                 <h2>Hi there,</h2>
                 <p>
                 I am a 22-year-old passionate developer from Galle, Sri Lanka. I am currently studying web development and app backend development.  I love to learn new things and do my best at anything that I do.
@@ -13,8 +50,14 @@ const About = () => {
                 <p>
                 In my free time, I love to travel with my friends and play cricket and football. I love to do new projects and gain knowledge and experience. So feel free to drop me a message.
                 </p>
-            </div>
-            <div className="about-2 about">
+            </motion.div >
+            <motion.div className="about-2 about"
+                variants={aboutScale}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{once: true}}
+                whileHover= 'hover'
+            >
                 <h2>Education</h2>
                 <div className="school">
                     <p className="time">2008-2021</p>
@@ -37,8 +80,14 @@ const About = () => {
                     <p className="institute"><a href="https://uom.lk/">University of Moratuwa</a></p>
                     <p className="degree">BSc (hons) in Computer Science and Engineering</p>
                 </div>
-            </div>
-            <div className="about-3 about">
+            </motion.div>
+            <motion.div  className="about-3 about"
+                variants={aboutScale}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{once: true}}
+                whileHover= 'hover'
+            >
                 <h2>Skills</h2>
                 <div className="skills">
                     <div className="tech-skills">
@@ -73,8 +122,14 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div className="about-4 about">
+            </motion.div >
+            <motion.div  className="about-4 about"
+                variants={aboutScale}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{once: true}}
+                whileHover= 'hover'
+            >
                 <h2>Experience</h2>
                 <ul>
                     <li>Main coordinator of R2U workshop program 2022</li>
@@ -84,8 +139,8 @@ const About = () => {
                     <li>All island art competition participation</li>
                     <li>Volunteer at Sasnaka Sansada Foundation</li>
                 </ul>
-            </div>
-        </div>
+            </motion.div >
+        </div >
     );
 }
 
