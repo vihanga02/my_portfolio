@@ -1,9 +1,6 @@
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion';
 import './About.css';
 import React from 'react';
-import { type } from '@testing-library/user-event/dist/type';
 
 const aboutScale = {
     hidden: {
@@ -12,7 +9,7 @@ const aboutScale = {
     },
     visible: {
         opacity: 0.75,
-        scale: 1,
+        scale: 0.9,
         y: 0,
         transition: {
             duration: 0.3,
@@ -20,7 +17,7 @@ const aboutScale = {
         }
     },
     hover: {
-        scale: 1.1,
+        scale: 1.2,
         opacity: 1,
         zIndex: 10,
         backgroundColor: 'rgb(22, 24, 41)',
@@ -35,7 +32,14 @@ const About = () => {
 
     return (
         <div className="about-content">
-            <h1>AB<span>OUT </span></h1>
+            <motion.h1
+                variants={aboutScale}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{once: true}}
+            >
+                AB<span>OUT </span>
+            </motion.h1>
             <motion.div  className="about-1 about"
                 variants={aboutScale}
                 initial='hidden'

@@ -34,7 +34,7 @@
 
 .about-content .about{
     border-radius: 1vw;
-    width: 40vw;
+    width: 36.3vw;
     text-align: justify;
     padding: 1vw;
 }
@@ -58,7 +58,7 @@
 .about-content .about-1{
     position: relative;
     top: 3vw;
-    left: 4vw;
+    left: 8vw;
 }
 
 .about-content .about-1 p{
@@ -70,7 +70,7 @@
 .about-content .about-2{
     position: relative;
     top: -13vw;
-    left: 46vw;
+    left: 42vw;
 }
 
 .about-content .about-2 .time{
@@ -84,7 +84,7 @@
 .about-content .about-2 .institute a{
     text-decoration: none;
     color: rgb(166, 255, 0);
-    font-size: 4.6vw;
+    font-size: 4.2vw;
     font-family: "Passion One", sans-serif;
     position: relative;
     top: -0.8vw;
@@ -124,14 +124,14 @@
 .about-content .about-2 .university .degree{
     position: relative;
     top: -1.5vw;
-    left: 10.5vw;
+    left: 8vw;
     width: 30vw;
 }
 
 .about-content .about-3{
     position: relative;
     top: -23vw;
-    left: 4vw;
+    left: 8vw;
 }
 
 
@@ -146,7 +146,7 @@
 }
 
 .about-content .about-3 .skills .tech-skills .language-logo img{
-    max-width: 5vw;
+    max-width: 4vw;
 }
 
 .about-content .about-3 .skills .tech-skills .language-logo{
@@ -168,7 +168,7 @@
 .about-content .about-4{
     position: relative;
     top: -48vw;
-    left: 46vw;
+    left: 42vw;
 }
 
 .about-content .about-4 ul{

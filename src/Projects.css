@@ -15,6 +15,8 @@
     display: flex;
     flex-direction: column;
     row-gap: 4vw;
+    overflow: hidden;
+    height: 100%;
 }
 
 .projects h1{
@@ -37,7 +39,7 @@
     width: 65%;
     height: 20vw;
     column-gap: 4vw;
-    background-color: rgb(3, 16, 46);
+    background-color: rgba(3, 16, 46, 0.505);
     border-radius: 0vw 1vw 1vw 0vw;
     padding: 1.5vw;
     padding-left: 0vw;
@@ -89,7 +91,6 @@
     left: 15vw;
     top: 1vw;
     padding: 0.6vw;
-    border: 0.1vw solid rgb(179, 255, 0);
     border-radius: 1vw;
     height: auto;
     width: 11vw;
@@ -97,18 +98,17 @@
 }
 
 .projects .project-git a{
-    color: rgb(179, 255, 0);
+    color: rgb(255, 255, 255);
     font-size: 1.5vw;
     font-weight: 100;
     text-decoration: none;
 }
 
-.projects .project-git:hover{
-    border: 0.1vw solid rgb(0, 225, 255);
-}
-
 .projects .project-git a:hover{
-    color: rgb(0, 225, 255);
+    color: rgb(165, 255, 0);
+}
+.projects .view-more-less{
+    height: 5vw;
 }
 
 .projects .view-more-less-button{
@@ -117,8 +117,9 @@
     background-color: transparent;
     font-size: 1.5vw;
     position: relative;
-    top: -1vw;
+    top: 1vw;
     left: 45vw;
+    height: 4vw;
 }
 
 .projects .view-more-less-button:hover{
@@ -128,9 +129,10 @@
 .projects .view-more-less svg{
     fill: rgb(255, 255, 255);
     position: relative;
-    top: 0.2vw;
+    top: 0.1vw;
     left: 0.5vw;
-    scale: 1.5;
+    scale: 1.2;
+    height: 2vw;
 }
 
 .projects .view-more-less svg:hover{
@@ -147,6 +149,6 @@
     position: relative;
     top: 0.2vw;
     left: 0.5vw;
-    scale: 1.5;
+    scale: 1.2;
     transform: rotate(180deg);
 }

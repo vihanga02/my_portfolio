@@ -1,10 +1,34 @@
-import "./Contact.css";
+import React from 'react';
+import { motion } from 'framer-motion';
+import './Contact.css';
+
+const collabZoom = {
+    hidden: {
+        scale: 1,
+        transition: {
+            duration: 0.5,
+        },
+    },
+    visible: {
+        scale: [1.2,1,1.2,1,1.2,1,1.2,1,1.2,1,1.2,1],
+        transition: {
+            duration: 7
+        }
+    }
+};
 
 const Contact = () => {
     return (
         <div className="contact-container">
             <h1>What's Up?</h1>
-            <h2>Lets Collab....</h2>
+            <motion.h2
+                className="animate-scroll"
+                variants={collabZoom}
+                initial="hidden" // Set initial state
+                whileInView="visible" // Trigger animation
+            >
+                Lets Collab...
+            </motion.h2>
             <form className="contact-form">
                 <label htmlFor="name-text" className="input-label">Name</label>
                 <input type="text" className="text-input" id="name-text" placeholder="Enter name" required/>
@@ -16,6 +40,6 @@ const Contact = () => {
             </form>
         </div>
     );
-}
+};
 
 export default Contact;
