@@ -24,7 +24,7 @@ const ParallaxText = ({ children, baseVelocity = 100 }: ScrollTempProps) => {
     clamp: false
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(-26.5, -60, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-200, -100, v)}%`);
 
   const directionFactor = useRef<number>(1);
 
@@ -43,11 +43,20 @@ const ParallaxText = ({ children, baseVelocity = 100 }: ScrollTempProps) => {
   });
 
   return (
-    <motion.div className='name' style={{ x }}>
-      <span>{children}</span>
-      <span>{children}</span>
-      <span>{children}</span>
-    </motion.div>
+    <div className='para-div'>
+      <motion.div className='name' style={{ x }}>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+      </motion.div>
+    </div>
   );
 }
 

@@ -3,18 +3,24 @@
 .home{
     color: aliceblue;
     z-index: -1;
-    width: 100%;
+    width: 100vm;
+    height: 55vw;
     display: flex;
     flex-direction: column;
     row-gap: 10vw;
+    overflow: hidden;
 }
 
-.home .home-content #name span{
-    color:rgba(240, 248, 255, 0.452);
-    margin-right: 1.3vw;
-    font-size: 3vw;
+.home .home-content .para-div{
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: -15vw;
+    overflow: visible;
+    white-space: nowrap;    
+    display: flex;    
+    flex-wrap: nowrap;
 }
-
 
 .home .home-content .name{
     color:#ffffff94;
@@ -22,17 +28,22 @@
     font-size: 8vw;
     font-family: "Saira Stencil One", cursive;
     position: absolute;
-    top: 33vw;
-    left: 0vw;
-    width: auto;
-    height: 7vw;
+    top: 0;
+    width: 100%;
     z-index: -1;
-    white-space: nowrap;
+    white-space: nowrap;    
+    display: flex;    
+    flex-wrap: nowrap;
+}
+
+.home .home-content .name span{
     display: flex;
+    flex-direction: row;
 }
 
 .home .home-content .name span span{
-    color:rgb(166, 255, 0)
+    color:rgb(166, 255, 0);
+    width: 100%;
 }
 
 .home .home-content .developer-tag{
@@ -84,7 +95,7 @@
     position: relative;
     top: 3vw;
     left:  68vw;
-    height: 44vw;
+    height: 50vw;
     width: auto;
 }
 
