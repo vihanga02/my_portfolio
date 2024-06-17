@@ -151,7 +151,7 @@ const Projects = () => {
                         </div>
                     </motion.div>
                     <div className='view-more-less'>
-                        <button onClick={handleViewMore} className='view-more-less-button less-button'>View Less</button>
+                        <button onClick={handleViewMore} className='view-more-less-button less-button'>View Less &uArr;</button>
                     </div>
                 </div>
             )}
@@ -161,7 +161,7 @@ const Projects = () => {
                         variants={buttonAnimation}
                         whileHover='hover'
                     >
-                        View More
+                        View More &dArr;
                     </motion.button>
                 </div>
             )}

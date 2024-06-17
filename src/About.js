@@ -68,7 +68,7 @@ const About = () => {
                     <p className="institute"><a href="https://www.richmondcollege.lk/">Richmond College</a></p>
                     <div className="exams">
                         <div>
-                            <p className="passes">3 pasees</p>
+                            <p className="passes">3A pasees</p>
                             <p>2021 Advanced Level (Physical Science).</p>
                             <p>Island Rank: 14</p>
                         </div>

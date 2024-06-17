@@ -78,6 +78,7 @@
     height: 50%;
     padding-right: 1vw;
     overflow-y: scroll;
+    text-align: justify;
 }
 
 .projects .project-content p::-webkit-scrollbar{
@@ -126,29 +127,66 @@
     color: rgb(179, 255, 0);
 }
 
-.projects .view-more-less svg{
-    fill: rgb(255, 255, 255);
-    position: relative;
-    top: 0.1vw;
-    left: 0.5vw;
-    scale: 1.2;
-    height: 2vw;
-}
-
-.projects .view-more-less svg:hover{
-    fill: rgb(179, 255, 0);
-}
-
 .projects .less-button{
     position: relative;
     top: 2vw;
 }
 
-.projects .less-button svg{
-    fill: rgb(255, 255, 255);
-    position: relative;
-    top: 0.2vw;
-    left: 0.5vw;
-    scale: 1.2;
-    transform: rotate(180deg);
+@media (max-width: 431px){
+    .projects{
+        height: auto;
+    }
+
+    .projects h1{
+        font-size: 60px;
+    }
+
+    .projects .nano-processor, .projects .grocery-shop, .projects .dummy-project{
+        width: 80%;
+        height: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects .grocery-shop{
+        right: -18vw;
+        flex-direction: column-reverse;
+    }
+
+    .projects .grocery-shop img, .projects .dummy-project img, .projects .nano-processor img{
+        width: 170px;
+        height: auto;
+    }
+
+    .projects div div h2{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .projects .project-content p{
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .projects .project-content p::-webkit-scrollbar{
+        width: 3px
+    }
+
+    .projects .project-content .project-git{
+        width: 100px;
+        left: 116px;
+        top: 10px
+    }
+
+    .projects .project-git a{
+        font-size: 12px;
+        width: auto;
+    }
+
+    .projects .view-more-less-button{
+        font-size: 15px;
+        top: 1vw;
+        left: 160px;
+        height: 4vw;
+    }
 }

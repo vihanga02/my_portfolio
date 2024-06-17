@@ -47,3 +47,26 @@ nav div a:hover{
 .nav-div svg:hover{
     fill: rgb(168, 255, 7);
 }
+
+@media (max-width: 450px){
+    nav{
+       height: 30px; 
+       width: 90vw;
+       border-radius: 10px;
+       left: 20px;
+    }
+
+    nav .links{
+        font-size: 17px;
+        align-items: flex-end;
+    }
+    
+    nav .links a{
+        padding-top: 6px;
+    }
+
+    .nav-div svg{
+        height: 29px;
+        width: 30px;
+    }
+}
