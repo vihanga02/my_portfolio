@@ -7,11 +7,15 @@ import NavBar from './NavBar';
 import React from 'react';
 import Footer from './Footer';
 import './App.css';
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Helmet>
+          <title>VM02</title>
+        </Helmet>
         <NavBar />
         <div className="content">
         <section id="home">
