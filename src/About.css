@@ -226,7 +226,7 @@
     }
 
     .about-content .about-2 .institute a{
-        font-size: 35px;
+        font-size: 33px;
     }
 
     .about-content .about-2 .exams p{
@@ -243,5 +243,8 @@
         width: 300px;
     }
 
+    .about-content .about-3 .skills .tech-skills .language-logo img{
+        max-width: 40px;
+    }
    
 }

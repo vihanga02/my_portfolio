@@ -38,3 +38,13 @@ footer a svg:hover{
 footer p{
     background: transparent;
 }
+
+@media (max-width: 431px){
+    footer{
+        padding-bottom: 15px;
+    }
+
+    footer a svg{
+        height: 39px;
+    }
+}
