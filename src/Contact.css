@@ -70,7 +70,7 @@
     background-color: rgba(166, 255, 0, 0.5); /* Blue color for the thumb */
 }
 
-.contact-container .contact-form textarea::-webkit-scrollbar-thumb:hover {
+.contact-container .contact-form textarea::-webkit-scrollbar-thumb:hover, .contact-container .contact-form textarea::-webkit-scrollbar-thumb:active {
     background-color: rgba(166, 255, 0, 0.65); /* Darker blue on hover */
 }
 
@@ -91,7 +91,7 @@
     border-top: 0.3vw solid rgba(69, 100, 12, 0.3);
 }
 
-.contact-container .contact-form button:hover{
+.contact-container .contact-form button:hover, .contact-container .contact-form button:active{
     background-color: rgba(9, 110, 6, 0.9);
 }
 

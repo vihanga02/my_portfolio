@@ -84,6 +84,7 @@ const Projects = () => {
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover='hover'
+                whileTap='hover'
             >
                 <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/basys-3-0.png?raw=true" alt="board" />
                 <div className="project-content">
@@ -96,6 +97,7 @@ const Projects = () => {
                             initial='hidden'
                             animate='visible'
                             whileHover='hover'
+                            whileTap='hover'
                         >
                             Check this out!
                         </motion.a>
@@ -108,6 +110,7 @@ const Projects = () => {
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover='hover'
+                whileTap='hover'
             >
                 <div className="project-content">
                     <h2>POS System</h2>
@@ -119,6 +122,7 @@ const Projects = () => {
                             initial='hidden'
                             animate='visible'
                             whileHover='hover'
+                            whileTap='hover'
                         >
                             Check this out!
                         </motion.a>
@@ -134,6 +138,7 @@ const Projects = () => {
                         whileInView='visible'
                         viewport={{once: true}}
                         whileHover='hover'
+                        whileTap='hover'
                         exit='hidden'
                     >
                         <img src="https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true" alt="dummy" />
@@ -144,6 +149,7 @@ const Projects = () => {
                                 <motion.a
                                     variants={buttonAnimation}
                                     whileHover='hover'
+                                    whileTap='hover'
                                 >
                                     Check this out!
                                 </motion.a>
@@ -160,6 +166,7 @@ const Projects = () => {
                     <motion.button onClick={handleViewMore} className='view-more-less-button'
                         variants={buttonAnimation}
                         whileHover='hover'
+                        whileTap='hover'
                     >
                         View More &dArr;
                     </motion.button>

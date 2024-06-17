@@ -46,6 +46,7 @@ const About = () => {
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover= 'hover'
+                whileTap='hover'
             >
                 <h2>Hi there,</h2>
                 <p>
@@ -61,6 +62,7 @@ const About = () => {
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover= 'hover'
+                whileTap='hover'
             >
                 <h2>Education</h2>
                 <div className="school">
@@ -91,6 +93,7 @@ const About = () => {
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover= 'hover'
+                whileTap='hover'
             >
                 <h2>Skills</h2>
                 <div className="skills">
@@ -133,6 +136,7 @@ const About = () => {
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover= 'hover'
+                whileTap='hover'
             >
                 <h2>Experience</h2>
                 <ul>

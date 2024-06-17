@@ -28,7 +28,7 @@ nav .links a{
     color: rgba(240, 248, 255, 0.671);
 }
 
-nav div a:hover{
+nav div a:hover, nav div a:active, nav div a:focus{
     color: rgba(168, 255, 7, 0.842);
     background-color: rgba(4, 15, 44, 0.842);
     border-bottom: 0.1rem solid rgb(166, 255, 0);
@@ -44,7 +44,7 @@ nav div a:hover{
     z-index: 2;
 }
 
-.nav-div svg:hover{
+.nav-div svg:hover, .nav-div svg:active{
     fill: rgb(168, 255, 7);
 }
 
