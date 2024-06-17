@@ -96,6 +96,10 @@
 }
 
 @media (max-width: 431px){
+    .contact-container{
+        top: 160px;
+    }
+
     .contact-container h1{
         font-size: 60px;
         margin-bottom: 1vw;

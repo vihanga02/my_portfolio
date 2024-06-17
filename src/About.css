@@ -208,15 +208,16 @@
     .about-content .about-2{
         top: 25px;
         left: 8vw;
+        height: 300px;
     }
 
     .about-content .about-3{
-        top: 80px;
+        top: 50px;
         left: 8vw;
     }
 
     .about-content .about-4{
-        top: 100px;;
+        top: 60px;;
         left: 8vw;
     }
 

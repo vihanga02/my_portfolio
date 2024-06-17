@@ -135,6 +135,7 @@
 @media (max-width: 431px){
     .projects{
         height: auto;
+        top: 90px;
     }
 
     .projects h1{
