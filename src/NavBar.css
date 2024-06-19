@@ -3,8 +3,9 @@ nav{
     width: 50vw;
     background: linear-gradient(90deg, rgba(18, 13, 41, 0.705) 50% , rgb(1, 23, 43));
     position: fixed;
-    border-radius: 1vw;
-    top: 0vw;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    top: 1vw;
     left: 2.5vw;
     z-index: 1;
 }
@@ -39,8 +40,8 @@ nav div a:hover, nav div a:active, nav div a:focus{
     height: 2.5vw;
     width: 2.5vw;
     position: fixed;
-    top: 0vw;
-    left: 0.1vw;
+    top: 1vw;
+    left: 0.5vw;
     z-index: 2;
 }
 
@@ -53,7 +54,8 @@ nav div a:hover, nav div a:active, nav div a:focus{
        height: 30px; 
        width: 90vw;
        border-radius: 10px;
-       left: 20px;
+       top: 10px;
+       left: 30px;
     }
 
     nav .links{
@@ -68,5 +70,7 @@ nav div a:hover, nav div a:active, nav div a:focus{
     .nav-div svg{
         height: 29px;
         width: 30px;
+        top: 10px;
+        left: 10px;
     }
 }

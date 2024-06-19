@@ -5,7 +5,7 @@ import React from 'react';
 const aboutScale = {
     hidden: {
         opacity: 0.5,
-        y: 400
+        y: 200
     },
     visible: {
         opacity: 0.7,
@@ -17,7 +17,7 @@ const aboutScale = {
         }
     },
     hover: {
-        scale: 1.2,
+        scale: 1,
         opacity: 1,
         zIndex: 10,
         backgroundColor: 'rgb(22, 24, 41)',
@@ -31,7 +31,7 @@ const aboutScale = {
 const h1Variant = {
     hidden: {
         opacity: 0.5,
-        y: 400
+        y: 200
     },
     visible: {
         opacity: 1, // Ensure opacity is 1 when in view
@@ -105,7 +105,7 @@ const About = () => {
             </motion.div>
             <motion.div  className="about-3 about"
                 variants={aboutScale}
-                initial='hidden1'
+                initial='hidden'
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover= 'hover'

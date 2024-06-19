@@ -123,6 +123,7 @@
     top: -1vw;
     left: 45vw;
     height: 4vw;
+    cursor: pointer;
 }
 
 .projects .view-more-div button:hover, .projects .view-more-less-button:active{
