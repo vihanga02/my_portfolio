@@ -1,0 +1,24 @@
+[
+    {
+      "id": "nano-processor",
+      "title": "Nano-Processor",
+      "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/basys-3-0.png?raw=true",
+      "description": "The assigned lab task is to design and develop a 4-bit nanoprocessor capable of executing 4 instructions. This includes several components that need to be developed or extended from the previous labs and this is a group project for Computer Organization and Digital Design module for semester 2. We used Vivado to all the coding and simulation works.",
+      "github_link": "https://github.com/vihanga02/Nano-Processor.git"
+    },
+    {
+      "id": "grocery-shop",
+      "title": "POS System",
+      "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/benefits-supermarket-1024x683.jpg?raw=true",
+      "description": "Required to develop a program to manage an online shopping system. The shopkeepers can login to the system and add new items and edit current items which are available in the shop. Customers can login to the system and track their current shopping cart. Backend is developed by Java and GUI is developed using JavaFX.",
+      "github_link": "https://github.com/vihanga02/Grocery_shop_System.git"
+    },
+    {
+      "id": "dummy-project",
+      "title": "Dummy Project",
+      "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true",
+      "description": "This is a dummy project to test the web page. I add this to increase the number of project divs on this page for testing purposes. In future, I will add more projects to this section and remove these dummy projects. I hope now you know enough about this now. Enjoy my page.",
+      "github_link": ""
+    }
+  ]
+  
