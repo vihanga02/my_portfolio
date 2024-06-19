@@ -25,7 +25,7 @@ const aboutScale = {
         transition: {
             duration: 0.3,
         },
-    }
+    },
 }
 
 const About = () => {
@@ -89,7 +89,7 @@ const About = () => {
             </motion.div>
             <motion.div  className="about-3 about"
                 variants={aboutScale}
-                initial='hidden'
+                initial='hidden1'
                 whileInView='visible'
                 viewport={{once: true}}
                 whileHover= 'hover'

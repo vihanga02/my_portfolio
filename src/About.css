@@ -57,8 +57,9 @@
 
 .about-content .about-1{
     position: relative;
+    transform-origin: right;
     top: 3vw;
-    left: 8vw;
+    left: 9vw;
 }
 
 .about-content .about-1 p{
@@ -68,9 +69,10 @@
 }
 
 .about-content .about-2{
+    transform-origin: left;
     position: relative;
-    top: -13vw;
-    left: 42vw;
+    top: -15vw;
+    left: 48vw;
 }
 
 .about-content .about-2 .time{
@@ -129,9 +131,10 @@
 }
 
 .about-content .about-3{
+    transform-origin: right;
     position: relative;
     top: -23vw;
-    left: 8vw;
+    left: 9vw;
 }
 
 
@@ -144,10 +147,10 @@
 .about-content .about-3 .skills .tech-skills .language-logo{
     padding: 0vw;
 }
-
 .about-content .about-3 .skills .tech-skills .language-logo img{
     max-width: 4vw;
-}
+} 
+
 
 .about-content .about-3 .skills .tech-skills .language-logo{
     display: flex;
@@ -165,10 +168,11 @@
 }
 
 
-.about-content .about-4{
+.about-content .about-4{   
+    transform-origin: left;
     position: relative;
     top: -48vw;
-    left: 42vw;
+    left: 48vw;
 }
 
 .about-content .about-4 ul{
@@ -191,6 +195,7 @@
     .about-content .about{
         width: 80%;
         border-radius: 10px;
+        transform-origin: center;
     }
 
     .about-content .about h2{
@@ -199,10 +204,6 @@
 
     .about-content .about p , .about-content .about li {
         font-size: 15px;
-    }
-
-    .about-content .about-1{
-        
     }
 
     .about-content .about-2{
