@@ -66,7 +66,7 @@ const Projects = () => {
     const [showAll, setShowAll] = useState(false);
   
     const handleViewMore = () => {
-      setShowAll(true);
+      setShowAll(!showAll);
     }
   
     return (
@@ -96,7 +96,7 @@ const Projects = () => {
                   whileHover='hover'
                   whileTap='hover'
                 >
-                  {project.github_link ? 'Check this out!' : ''}
+                  {project.github_link = 'Check this out!' }
                 </motion.a>
               </p>
             </div>
@@ -111,6 +111,18 @@ const Projects = () => {
               whileTap='hover'
             >
               View More
+            </motion.button>
+          </div>
+        )}
+        {showAll && (
+          <div className="view-more-div">
+            <motion.button
+              onClick={handleViewMore}
+              variants={buttonAnimation}
+              whileHover='hover'
+              whileTap='hover'
+            >
+              View Less
             </motion.button>
           </div>
         )}
