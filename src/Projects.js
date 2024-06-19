@@ -19,7 +19,7 @@ const startings_left = {
         }
     },
     hover: {
-        scale: 1.01,
+        scale: 1.05,
         opacity: 1,
         backgroundColor: 'rgb(22, 24, 41)',
         boxShadow: "0px 0px 8px rgb(255, 255, 255)",
@@ -42,7 +42,7 @@ const startings_right = {
         }
     },
     hover: {
-        scale: 1.01,
+        scale: 1.05,
         opacity: 1,
         backgroundColor: 'rgb(22, 24, 41)',
         boxShadow: "0px 0px 8px rgb(255, 255, 255)",
@@ -62,6 +62,20 @@ const buttonAnimation = {
     }
 };
 
+const h1Variant = {
+    hidden: {
+        x: 100,
+        opacity: 0
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 1
+        }
+    }
+};
+
 const Projects = () => {
     const [showAll, setShowAll] = useState(false);
   
@@ -71,7 +85,14 @@ const Projects = () => {
   
     return (
       <div className="projects">
-        <h1><span>Pro</span>jects</h1>
+        <motion.h1
+            variants={h1Variant}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true }}
+        >
+            <span>Pro</span>jects
+        </motion.h1>
         {projectsData.slice(0, showAll ? projectsData.length : 2).map((project, index) => (
           <motion.div
             key={project.id}

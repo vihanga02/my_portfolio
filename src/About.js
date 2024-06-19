@@ -8,7 +8,7 @@ const aboutScale = {
         y: 400
     },
     visible: {
-        opacity: 0.75,
+        opacity: 0.7,
         scale: 0.9,
         y: 0,
         transition: {
@@ -28,12 +28,28 @@ const aboutScale = {
     },
 }
 
+const h1Variant = {
+    hidden: {
+        opacity: 0.5,
+        y: 400
+    },
+    visible: {
+        opacity: 1, // Ensure opacity is 1 when in view
+        scale: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            type: 'tween'
+        }
+    },
+};
+
 const About = () => {
 
     return (
         <div className="about-content">
             <motion.h1
-                variants={aboutScale}
+                variants={h1Variant}
                 initial='hidden'
                 whileInView='visible'
                 viewport={{once: true}}
