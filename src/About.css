@@ -195,7 +195,6 @@
     .about-content .about{
         width: 80%;
         border-radius: 10px;
-        transform-origin: center;
     }
 
     .about-content .about h2{
@@ -206,18 +205,25 @@
         font-size: 15px;
     }
 
+    .about-content .about-1{
+        transform-origin: center;
+    }
+
     .about-content .about-2{
+        transform-origin: center;
         top: 25px;
         left: 8vw;
         height: 300px;
     }
 
     .about-content .about-3{
+        transform-origin: center;
         top: 50px;
         left: 8vw;
     }
 
     .about-content .about-4{
+        transform-origin: center;
         top: 60px;;
         left: 8vw;
     }

@@ -43,6 +43,7 @@
     border-radius: 0vw 1vw 1vw 0vw;
     padding: 1.5vw;
     padding-left: 0vw;
+    transform-origin: left;
 }
 
 .projects .grocery-shop{
@@ -51,6 +52,7 @@
     padding-left: 1.5vw;
     padding-right: 0vw;
     border-radius: 1vw 0vw 0vw 1vw;
+    transform-origin: right;
 }
 
 .projects .grocery-shop img, .projects .dummy-project img, .projects .nano-processor img{
