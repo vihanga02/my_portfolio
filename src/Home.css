@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
-.home{
+.home {
     color: aliceblue;
     z-index: -1;
     width: 100vm;
@@ -9,19 +9,19 @@
     overflow: hidden;
 }
 
-.home .home-content .para-div{
+.home .home-content .para-div {
     width: 100%;
     align-items: center;
     position: relative;
     top: -15vw;
     overflow: visible;
-    white-space: nowrap;    
-    display: flex;    
+    white-space: nowrap;
+    display: flex;
     flex-wrap: nowrap;
 }
 
-.home .home-content .name{
-    color:#ffffff94;
+.home .home-content .name {
+    color: #ffffff94;
     background: transparent;
     font-size: 8vw;
     font-family: "Saira Stencil One", cursive;
@@ -29,25 +29,25 @@
     top: 0;
     width: 100%;
     z-index: -1;
-    white-space: nowrap;    
-    display: flex;    
+    white-space: nowrap;
+    display: flex;
     flex-wrap: nowrap;
 }
 
-.home .home-content .name span{
+.home .home-content .name span {
     display: flex;
     flex-direction: row;
 }
 
-.home .home-content .name span span{
-    color:rgb(166, 255, 0);
+.home .home-content .name span span {
+    color: rgb(166, 255, 0);
     width: 100%;
 }
 
-.home .home-content .developer-tag{
+.home .home-content .developer-tag {
     width: 100%;
     background: transparent;
-    font-family: monospace , fantasy , cursive;
+    font-family: monospace, fantasy, cursive;
     font-weight: bolder;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@
     top: 8vw;
 }
 
-.home .home-content .developer-tag #tag0{
+.home .home-content .developer-tag #tag0 {
     background: transparent;
     color: rgba(255, 255, 255, 0.1);
     position: relative;
@@ -66,7 +66,7 @@
     height: 2.6vw;
 }
 
-.home .home-content .developer-tag #tag1{
+.home .home-content .developer-tag #tag1 {
     background: transparent;
     color: rgba(255, 255, 255, 0.2);
     position: relative;
@@ -74,7 +74,7 @@
     height: 3.7vw;
 }
 
-.home .home-content .developer-tag #tag2{
+.home .home-content .developer-tag #tag2 {
     background: transparent;
     color: rgba(255, 255, 255, 0.35);
     position: relative;
@@ -82,65 +82,66 @@
     height: 4.7vw;
 }
 
-.home .home-content .developer-tag #tag3{
+.home .home-content .developer-tag #tag3 {
     background: transparent;
     color: rgb(255, 255, 255);
     position: relative;
     font-size: 9vw;
 }
 
-.home .home-content img{
+.home .home-content img {
     position: relative;
     top: 3vw;
-    left:  68vw;
+    left: 68vw;
     height: 50vw;
     width: auto;
 }
 
-@media (max-width: 821px){
-    .home{
-        height:200px;
+@media (max-width: 821px) {
+    .home {
+        height: 350px;
         row-gap: 5vw;
     }
 
-    .home .home-content .para-div{
-        top: -20vw;
+    .home .home-content .para-div {
+        top: -15vw;
     }
 
-    .home .home-content .name{
+    .home .home-content .name {
         font-size: 10vw;
         top: 0;
         color: aliceblue;
     }
 
-    .home .home-content .developer-tag{
+    .home .home-content .developer-tag {
         left: -10vw;
         top: 10vw;
+        z-index: -1;
     }
 
-    .home .home-content .developer-tag #tag0{
+    .home .home-content .developer-tag #tag0 {
         font-size: 5vw;
         height: 3.3vw;
     }
 
-    .home .home-content .developer-tag #tag1{
+    .home .home-content .developer-tag #tag1 {
         font-size: 6.5vw;
         height: 4.3vw;
     }
 
-    .home .home-content .developer-tag #tag2{
+    .home .home-content .developer-tag #tag2 {
         font-size: 8vw;
         height: 5.3vw;
     }
 
-    .home .home-content .developer-tag #tag3{
+    .home .home-content .developer-tag #tag3 {
         font-size: 10vw;
     }
 
-    .home .home-content img{
+    .home .home-content img {
         top: 5vw;
-        left: 60vw;
-        height: 40vw;
+        left: 68vw;
+        height: 50vw;
     }
 }
 
@@ -160,7 +161,7 @@
     }
 
     .home .home-content .name {
-        font-size: 80px;  
+        font-size: 80px;
         top: -30px;
         z-index: 1;
     }
