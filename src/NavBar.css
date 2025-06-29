@@ -1,0 +1,76 @@
+nav{
+    height: 2.5vw;
+    width: 50vw;
+    background: linear-gradient(90deg, rgba(18, 13, 41, 0.705) 50% , rgb(1, 23, 43));
+    position: fixed;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    top: 1vw;
+    left: 2.5vw;
+    z-index: 1;
+}
+
+nav .links{
+    background-color: transparent;
+    width: 100%;
+    font-size: 1.4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav .links a{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    height: 2vw;
+    width: 100%;
+    padding-top: 0.5vw;
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.671);
+}
+
+nav div a:hover, nav div a:active, nav div a:focus{
+    color: rgba(168, 255, 7, 0.842);
+    background-color: rgba(4, 15, 44, 0.842);
+    border-bottom: 0.1rem solid rgb(166, 255, 0);
+}
+
+.nav-div svg{
+    fill: aliceblue;
+    height: 2.5vw;
+    width: 2.5vw;
+    position: fixed;
+    top: 1vw;
+    left: 0.5vw;
+    z-index: 2;
+}
+
+.nav-div svg:hover, .nav-div svg:active{
+    fill: rgb(168, 255, 7);
+}
+
+@media (max-width: 450px){
+    nav{
+       height: 30px; 
+       width: 90vw;
+       border-radius: 10px;
+       top: 10px;
+       left: 30px;
+    }
+
+    nav .links{
+        font-size: 17px;
+        align-items: flex-end;
+    }
+    
+    nav .links a{
+        padding-top: 6px;
+    }
+
+    .nav-div svg{
+        height: 29px;
+        width: 30px;
+        top: 10px;
+        left: 10px;
+    }
+}

@@ -1,9 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 *{
-    /* margin: 0rem; */
+    background-color: rgb(0, 6, 20);
+    margin: 0rem;
 }
 
 html, body, #root, .App {
