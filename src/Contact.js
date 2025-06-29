@@ -1,233 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+// import './Contact.css';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1
+const collabZoom = {
+    hidden: {
+        scale: 1,
+        transition: {
+            duration: 0.5,
+        },
+    },
+    visible: {
+        scale: [1.2,1,1.2,1,1.2,1,1.2,1,1.2,1,1.2,1],
+        transition: {
+            duration: 7
+        }
     }
-  }
-};
-
-const itemVariants = {
-  hidden: { y: 30, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
 };
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
-
-  return (
-    <div className="min-h-screen py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-5xl md:text-6xl font-playfair font-bold text-slate-800 mb-4">
-            Let's <span className="text-gradient-purple">Connect</span>
-          </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Have a project in mind? Let's collaborate and create something amazing together
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <motion.div 
-            className="glass rounded-3xl p-8 hover:shadow-glass-lg transition-all duration-300"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <motion.div variants={itemVariants} className="mb-8">
-              <h3 className="text-2xl font-semibold text-slate-800 mb-2">Send me a message</h3>
-              <p className="text-slate-600">I'll get back to you as soon as possible</p>
-            </motion.div>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <motion.div variants={itemVariants}>
-                <label htmlFor="name" className="block text-slate-700 font-medium mb-2">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 glass rounded-2xl border-0 focus:outline-none focus:ring-2 focus:ring-primary-400 text-slate-700 placeholder-slate-400"
-                  placeholder="Enter your name"
-                  required
-                />
-              </motion.div>
-
-              <motion.div variants={itemVariants}>
-                <label htmlFor="email" className="block text-slate-700 font-medium mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 glass rounded-2xl border-0 focus:outline-none focus:ring-2 focus:ring-primary-400 text-slate-700 placeholder-slate-400"
-                  placeholder="Enter your email"
-                  required
-                />
-              </motion.div>
-
-              <motion.div variants={itemVariants}>
-                <label htmlFor="message" className="block text-slate-700 font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full px-4 py-3 glass rounded-2xl border-0 focus:outline-none focus:ring-2 focus:ring-primary-400 text-slate-700 placeholder-slate-400 resize-none"
-                  placeholder="Tell me about your project..."
-                  required
-                />
-              </motion.div>
-
-              <motion.button
-                type="submit"
-                className="w-full bg-gradient-secondary text-white font-semibold py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-                variants={itemVariants}
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Send Message
-              </motion.button>
-            </form>
-          </motion.div>
-
-          {/* Contact Info */}
-          <motion.div 
-            className="space-y-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {/* Contact Cards */}
-            {[
-              {
-                icon: "📧",
-                title: "Email",
-                info: "vihagamuthumala@gmail.com",
-                link: "mailto:vihagamuthumala@gmail.com"
-              },
-              {
-                icon: "📍",
-                title: "Location",
-                info: "Galle, Sri Lanka",
-                link: null
-              },
-              {
-                icon: "🎓",
-                title: "University",
-                info: "University of Moratuwa",
-                link: "https://uom.lk/"
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="glass rounded-2xl p-6 hover:shadow-glass-lg transition-all duration-300"
-                variants={itemVariants}
-                whileHover={{ scale: 1.02, y: -2 }}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center text-xl">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-slate-800 font-semibold">{item.title}</h4>
-                    {item.link ? (
-                      <a 
-                        href={item.link}
-                        className="text-slate-600 hover:text-primary-600 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.info}
-                      </a>
-                    ) : (
-                      <p className="text-slate-600">{item.info}</p>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-
-            {/* Social Links */}
-            <motion.div 
-              className="glass rounded-2xl p-6 hover:shadow-glass-lg transition-all duration-300"
-              variants={itemVariants}
+    return (
+        <div className="flex flex-col justify-center items-center relative top-[20vw] w-[99vw] text-[aliceblue]">
+            <h1 className="text-[9vw] mb-[1vw] m-0">What's Up?</h1>
+            <motion.h2
+                className="text-[4vw] mb-[2vw] text-lime-400 m-0 animate-scroll"
+                variants={collabZoom}
+                initial="hidden"
+                whileInView="visible"
             >
-              <h4 className="text-slate-800 font-semibold mb-4">Connect with me</h4>
-              <div className="flex space-x-4">
-                {[
-                  { name: "GitHub", url: "http://github.com/vihanga02", icon: "🐙" },
-                  { name: "LinkedIn", url: "https://www.linkedin.com/in/vihanga-muthumala-678451277", icon: "💼" },
-                  { name: "Instagram", url: "https://www.instagram.com/__vihanga__m__", icon: "📸" },
-                  { name: "Facebook", url: "https://www.facebook.com/vihanga.muthumala.1/", icon: "👥" }
-                ].map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 glass-dark rounded-2xl flex items-center justify-center text-lg hover:shadow-lg transition-all duration-300"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
+                Lets Collab...
+            </motion.h2>
+            <form className="flex flex-col w-[30vw]">
+                <label htmlFor="name-text" className="text-[1.5vw] mb-[0.2vw]">Name</label>
+                <input type="text" className="mb-[1.5vw] border border-lime-300 border-b-[0.2vw] border-r-[0.2vw] rounded-[0.5vw] text-white p-[0.6vw] bg-[rgba(1,3,32,0.842)] font-sans" id="name-text" placeholder="Enter name" required/>
+                <label htmlFor="email-text" className="text-[1.5vw] mb-[0.2vw]">Email</label>
+                <input type="text" className="mb-[1.5vw] border border-lime-300 border-b-[0.2vw] border-r-[0.2vw] rounded-[0.5vw] text-white p-[0.6vw] bg-[rgba(1,3,32,0.842)] font-sans" id="email-text" placeholder="Enter email" required/>
+                <label htmlFor="message-text" className="text-[1.5vw] mb-[0.2vw]">Message</label>
+                <textarea type="text" className="mb-[1.5vw] border border-lime-300 border-b-[0.2vw] border-r-[0.2vw] rounded-[0.5vw] p-[0.6vw] h-[10vw] text-white bg-[rgba(1,3,32,0.842)] resize-none font-sans scrollbar-thin scrollbar-thumb-lime-400" id="message-text" placeholder="Type here" required/>
+                <button type="submit" className="bg-lime-300/80 rounded-[0.5vw] h-[3vw] text-[1.7vw] font-bold text-white border-b-[0.3vw] border-l-[0.3vw] border-r-[0.3vw] border-t-[0.3vw] border-b-lime-800 border-l-lime-800/30 border-r-lime-800 border-t-lime-800/30 hover:bg-green-900/90 transition-colors">Send</button>
+            </form>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Contact;
