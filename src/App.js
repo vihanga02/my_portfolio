@@ -1,12 +1,11 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import NavBar from './NavBar';
-import React from 'react';
 import Footer from './Footer';
-import './App.css';
 import { Helmet } from 'react-helmet';
 
 function App() {

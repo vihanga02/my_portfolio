@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
-import './About.css';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const aboutScale = {
     hidden: {

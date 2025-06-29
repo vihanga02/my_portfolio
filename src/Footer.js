@@ -1,4 +1,4 @@
-import './Footer.css';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const svgDropdown = {

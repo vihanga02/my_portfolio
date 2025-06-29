@@ -1,4 +1,3 @@
-import './Projects.css';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import projectsData from './ProjectData.json';
@@ -117,7 +116,7 @@ const Projects = () => {
                   whileHover='hover'
                   whileTap='hover'
                 >
-                  {project.github_link = 'Check this out!' }
+                  Check this out!
                 </motion.a>
               </p>
             </div>
