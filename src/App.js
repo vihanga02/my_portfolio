@@ -6,7 +6,6 @@ import Contact from './Contact';
 import NavBar from './NavBar';
 import React from 'react';
 import Footer from './Footer';
-import './App.css';
 import { Helmet } from 'react-helmet';
 
 function App() {
