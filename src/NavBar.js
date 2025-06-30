@@ -86,7 +86,7 @@ const NavBar = () => {
           <img src={logo} alt="Logo" style={{ height: '50px', borderRadius: '50%' }} />
       </motion.div>
 
-      <div className="nav-links" style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
+      <div className="nav-links" style={{ gap: '2.5rem', alignItems: 'center' }}>
         {navItems.map((item) => (
           <motion.div
             key={item.to}

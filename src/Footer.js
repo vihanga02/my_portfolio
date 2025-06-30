@@ -84,38 +84,17 @@ const Footer = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            style={{
-                padding: '4rem 2rem',
-                textAlign: 'center',
-                borderTop: '1px solid rgba(145, 200, 228, 0.2)',
-                background: 'rgba(255, 255, 255, 0.9)',
-                backdropFilter: 'blur(25px) saturate(180%)',
-                position: 'relative'
-            }}
         >
             <motion.h3
                 variants={itemVariants}
-                className="gradient-text"
-                style={{
-                    fontSize: '2rem',
-                    fontWeight: '700',
-                    marginBottom: '2rem'
-                }}
+                className="gradient-text footer-heading"
             >
                 Let's Connect
             </motion.h3>
 
             <motion.p
                 variants={itemVariants}
-                style={{
-                    fontSize: '1.1rem',
-                    color: '#749BC2',
-                    marginBottom: '3rem',
-                    maxWidth: '600px',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    lineHeight: '1.6'
-                }}
+                className="footer-text"
             >
                 Ready to collaborate on your next project? Let's create something amazing together.
             </motion.p>
@@ -123,13 +102,6 @@ const Footer = () => {
             <motion.div
                 className="social-links"
                 variants={itemVariants}
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    gap: '1.5rem',
-                    marginBottom: '3rem',
-                    flexWrap: 'wrap'
-                }}
             >
                 {socialLinks.map((link, index) => (
                     <motion.a
@@ -137,37 +109,12 @@ const Footer = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        whileHover={{ 
+                        className="social-link"
+                        whileHover={{
                             scale: 1.1,
                             y: -5
                         }}
                         whileTap={{ scale: 0.95 }}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            width: '60px',
-                            height: '60px',
-                            background: 'rgba(145, 200, 228, 0.15)',
-                            borderRadius: '50%',
-                            color: '#4682A9',
-                            textDecoration: 'none',
-                            border: '2px solid rgba(145, 200, 228, 0.3)',
-                            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                            boxShadow: '0 4px 20px rgba(70, 130, 169, 0.1)'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.target.style.background = 'rgba(145, 200, 228, 0.25)';
-                            e.target.style.borderColor = 'rgba(145, 200, 228, 0.5)';
-                            e.target.style.color = '#749BC2';
-                            e.target.style.boxShadow = '0 8px 30px rgba(70, 130, 169, 0.2)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.target.style.background = 'rgba(145, 200, 228, 0.15)';
-                            e.target.style.borderColor = 'rgba(145, 200, 228, 0.3)';
-                            e.target.style.color = '#4682A9';
-                            e.target.style.boxShadow = '0 4px 20px rgba(70, 130, 169, 0.1)';
-                        }}
                         title={link.name}
                     >
                         {link.icon}
@@ -176,26 +123,13 @@ const Footer = () => {
             </motion.div>
 
             <motion.div
+                className="footer-bottom"
                 variants={itemVariants}
-                style={{
-                    borderTop: '1px solid rgba(145, 200, 228, 0.2)',
-                    paddingTop: '2rem'
-                }}
             >
-                <p style={{
-                    fontSize: '1rem',
-                    color: '#749BC2',
-                    margin: 0,
-                    fontWeight: '500'
-                }}>
+                <p className="copyright-text">
                     © 2024 Vihanga Muthumala. All rights reserved.
                 </p>
-                <p style={{
-                    fontSize: '0.9rem',
-                    color: '#91C8E4',
-                    margin: '0.5rem 0 0 0',
-                    fontWeight: '400'
-                }}>
+                <p className="tech-stack-text">
                     Built with React & Framer Motion
                 </p>
             </motion.div>
