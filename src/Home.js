@@ -1,6 +1,4 @@
-import React from 'react';
 import { motion } from "framer-motion";
-import ParallaxText from './ScrollTempX.tsx';
 import image from './img/Untitled design.png'
 
 const Home = () => {

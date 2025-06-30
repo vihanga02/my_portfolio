@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import projectsData from './ProjectData.json';
 
-const INITIAL_VISIBLE = 3; // ← how many you see before you click "View More"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -27,7 +25,6 @@ const buttonVariants = {
 };
 
 const Projects = () => {
-  const [showAll, setShowAll] = useState(false);
 
   // Add safety check
   if (!projectsData || projectsData.length === 0) {
@@ -37,14 +34,6 @@ const Projects = () => {
       </div>
     );
   }
-
-  // Toggle using functional update
-  const handleViewMore = () => {
-    setShowAll(!showAll);
-  };
-
-  // // Calculate displayed projects based on showAll state
-  // const displayed = showAll ? projectsData : projectsData.slice(0, INITIAL_VISIBLE);
 
   return (
     <motion.div

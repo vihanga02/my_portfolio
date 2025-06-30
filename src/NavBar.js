@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { AnimatePresence, motion } from 'framer-motion';
 import logo from './img/favourite.ico'; // Ensure this path is correct
