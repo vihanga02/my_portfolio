@@ -53,9 +53,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-
-        console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-
+        
         try {
           // Use environment variables for EmailJS
           await emailjs.send(
