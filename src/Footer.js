@@ -1,61 +1,207 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const svgDropdown = {
-    hover: {
-      scale: 1.1
-    },
-  };
-  
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.2
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut"
+        }
+    }
+};
+
 const Footer = () => {
+    const socialLinks = [
+        {
+            name: 'Email',
+            url: 'mailto:vihagamuthumala@gmail.com',
+            icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+            )
+        },
+        {
+            name: 'Instagram',
+            url: 'https://www.instagram.com/__vihanga__m__',
+            icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            )
+        },
+        {
+            name: 'Facebook',
+            url: 'https://www.facebook.com/vihanga.muthumala.1/',
+            icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+            )
+        },
+        {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/vihanga-muthumala-678451277',
+            icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            )
+        },
+        {
+            name: 'GitHub',
+            url: 'http://github.com/vihanga02',
+            icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+            )
+        }
+    ];
+
     return (
-        <footer>
-            <h3>Contact Me</h3>
-            <div className="social-links">
-                <a href="mailto:vihagamuthumala@gmail.com" className='email-link'>
-                    <motion.svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"   xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-stroke=""  data-darkreader-inline-fill=""
-                        variants={svgDropdown}
-                        whileHover='hover'
-                        whileTap='hover'
+        <motion.footer
+            className="footer glass-card"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            style={{
+                padding: '4rem 2rem',
+                textAlign: 'center',
+                borderTop: '1px solid rgba(145, 200, 228, 0.2)',
+                background: 'rgba(255, 255, 255, 0.9)',
+                backdropFilter: 'blur(25px) saturate(180%)',
+                position: 'relative'
+            }}
+        >
+            <motion.h3
+                variants={itemVariants}
+                className="gradient-text"
+                style={{
+                    fontSize: '2rem',
+                    fontWeight: '700',
+                    marginBottom: '2rem'
+                }}
+            >
+                Let's Connect
+            </motion.h3>
+
+            <motion.p
+                variants={itemVariants}
+                style={{
+                    fontSize: '1.1rem',
+                    color: '#749BC2',
+                    marginBottom: '3rem',
+                    maxWidth: '600px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    lineHeight: '1.6'
+                }}
+            >
+                Ready to collaborate on your next project? Let's create something amazing together.
+            </motion.p>
+
+            <motion.div
+                className="social-links"
+                variants={itemVariants}
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '1.5rem',
+                    marginBottom: '3rem',
+                    flexWrap: 'wrap'
+                }}
+            >
+                {socialLinks.map((link, index) => (
+                    <motion.a
+                        key={link.name}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ 
+                            scale: 1.1,
+                            y: -5
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: '60px',
+                            height: '60px',
+                            background: 'rgba(145, 200, 228, 0.15)',
+                            borderRadius: '50%',
+                            color: '#4682A9',
+                            textDecoration: 'none',
+                            border: '2px solid rgba(145, 200, 228, 0.3)',
+                            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                            boxShadow: '0 4px 20px rgba(70, 130, 169, 0.1)'
+                        }}
+                        onMouseEnter={(e) => {
+                            e.target.style.background = 'rgba(145, 200, 228, 0.25)';
+                            e.target.style.borderColor = 'rgba(145, 200, 228, 0.5)';
+                            e.target.style.color = '#749BC2';
+                            e.target.style.boxShadow = '0 8px 30px rgba(70, 130, 169, 0.2)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.background = 'rgba(145, 200, 228, 0.15)';
+                            e.target.style.borderColor = 'rgba(145, 200, 228, 0.3)';
+                            e.target.style.color = '#4682A9';
+                            e.target.style.boxShadow = '0 4px 20px rgba(70, 130, 169, 0.1)';
+                        }}
+                        title={link.name}
                     >
-                        <path fill="none" d="M0 0h24v24H0z"></path><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></motion.svg>
-                </a>
-                <a href="https://www.instagram.com/__vihanga__m__">
-                    <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="instagram-logo"
-                        variants={svgDropdown}
-                        whileHover='hover'
-                        whileTap='hover'
-                    ><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="32">
-                        </circle><path d="M172,28H84A56.06353,56.06353,0,0,0,28,84v88a56.06353,56.06353,0,0,0,56,56h88a56.06353,56.06353,0,0,0,56-56V84A56.06353,56.06353,0,0,0,172,28ZM128,176a48,48,0,1,1,48-48A48.05436,48.05436,0,0,1,128,176Zm52-88a12,12,0,1,1,12-12A12,12,0,0,1,180,88Z"></path></motion.svg> 
-                </a>
-                <a href="https://www.facebook.com/vihanga.muthumala.1/">
-                    <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="facebook-logo"
-                        variants={svgDropdown}
-                        whileHover='hover'
-                        whileTap='hover'
-                    >
-                        <path d="M24 0H2C.9 0 0 .9 0 2v22c0 1.1.9 2 2 2h11.823V15.936h-3.145v-3.984h3.145V8.807c0-3.853 3.145-4.823 3.984-4.823h4.194v3.774h-2.936c-.979 0-1.048 1.048-1.048 1.048v3.145h3.774l-.419 3.984h-3.355V26H24c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"></path></motion.svg>
-                </a>
-                <a href="https://www.linkedin.com/in/vihanga-muthumala-678451277?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgHGe0WQMR%2BW4wMCqaBcRpQ%3D%3D">
-                    <motion.svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 26 26" id="linkedin-logo"
-                        variants={svgDropdown}
-                        whileHover='hover'
-                        whileTap='hover'
-                    >
-                        <path d="M24,0H2C0.9,0,0,0.9,0,2v22c0,1.1,0.9,2,2,2h22c1.1,0,2-0.9,2-2V2C26,0.9,25.1,0,24,0z M7.816,22H4V9.725h3.816V22z M5.878,8.219c-1.349,0-2.25-0.956-2.222-2.138C3.628,4.844,4.529,3.915,5.906,3.915c1.379,0,2.251,0.929,2.279,2.166C8.186,7.263,7.286,8.219,5.878,8.219z M22,22h-3.815v-6.802c0-1.582-0.553-2.661-1.934-2.661c-1.053,0-1.681,0.728-1.932,1.431c-0.1,0.226-0.15,0.603-0.15,0.953V22h-3.816v-8.358c0-1.532-0.05-2.837-0.1-3.916h3.313l0.176,1.682h0.076c0.502-0.779,1.757-1.958,3.79-1.958c2.51,0,4.392,1.656,4.392,5.271V22z"></path></motion.svg>
-                </a>
-                <a href="http://github.com/vihanga02">
-                    <motion.svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 28 27.311" viewBox="0 0 28 27.311" id="github-logo"
-                        variants={svgDropdown}
-                        whileHover='hover'
-                        whileTap='hover'
-                    >
-                        <path d="M28,14c0-7.732-6.268-14-14-14S0,6.268,0,14c0,6.221,4.061,11.488,9.674,13.311c0.767-0.235,0.803-0.702,0.803-0.702s0-1.383,0-2.661c-0.843,0.155-1.89,0.157-2.271,0.157c-0.464,0-2.009-0.386-2.689-2.132c-0.68-1.746-1.947-1.916-1.947-2.225s0.278-0.371,0.278-0.371s0.17,0,0.927,0c0.757,0,1.514,1.267,2.04,2.04s1.792,0.927,2.411,0.927c0.347,0,0.885-0.175,1.294-0.329c0.167-1.082,0.792-1.896,0.792-1.896c-6.243-0.556-6.397-5.223-6.397-7.046c0-1.823,1.484-3.616,1.484-3.616s-0.719-2.04,0.185-3.709c1.947,0.015,3.894,1.483,3.894,1.483S12.238,6.676,14,6.676s3.523,0.556,3.523,0.556s1.947-1.468,3.894-1.483c0.904,1.669,0.185,3.709,0.185,3.709s1.484,1.792,1.484,3.616c0,1.823-0.155,6.49-6.397,7.046c0,0,0.834,1.082,0.834,2.411s0,4.08,0,4.08s0.035,0.466,0.803,0.702C23.939,25.488,28,20.221,28,14z"></path></motion.svg>
-                </a>
-            </div>
-            <p>Copyright © 2024, All rights reserved</p>
-        </footer>
-    )
-}
+                        {link.icon}
+                    </motion.a>
+                ))}
+            </motion.div>
+
+            <motion.div
+                variants={itemVariants}
+                style={{
+                    borderTop: '1px solid rgba(145, 200, 228, 0.2)',
+                    paddingTop: '2rem'
+                }}
+            >
+                <p style={{
+                    fontSize: '1rem',
+                    color: '#749BC2',
+                    margin: 0,
+                    fontWeight: '500'
+                }}>
+                    © 2024 Vihanga Muthumala. All rights reserved.
+                </p>
+                <p style={{
+                    fontSize: '0.9rem',
+                    color: '#91C8E4',
+                    margin: '0.5rem 0 0 0',
+                    fontWeight: '400'
+                }}>
+                    Built with React & Framer Motion
+                </p>
+            </motion.div>
+        </motion.footer>
+    );
+};
 
 export default Footer;

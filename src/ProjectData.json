@@ -1,24 +1,56 @@
 [
+  {
+      "id": "spirit11-fantasy-cricket",
+      "title": "Spirit11 - Fantasy Cricket Platform",
+      "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true",
+      "description": "A high-performance fantasy cricket platform built with Next.js 15 and FastAPI, featuring real-time gameplay, secure authentication, and an AI-powered chatbot. Includes fantasy team creation, player analytics, leaderboard systems, and admin panel for comprehensive cricket tournament management.",
+      "github_link": "https://github.com/vihanga02/ViteBrackets_02.git",
+      "technologies": ["Next.js", "FastAPI", "MongoDB", "JWT", "Tailwind CSS", "Gemini AI"],
+      "live_link": "https://www.linkedin.com/in/vihanga-muthumala-678451277/recent-activity/all/#:~:text=https%3A//lnkd.in/g%2DyVhKQQ"
+    },
+    {
+      "id": "supply-chain-management",
+      "title": "Supply Chain Management System",
+      "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true",
+      "description": "A comprehensive Supply Chain Management System developed as a group project. The system provides end-to-end supply chain visibility, inventory management, and logistics tracking. Features include real-time monitoring, supplier management, and analytics dashboard for optimizing supply chain operations.",
+      "github_link": "https://github.com/vihanga02/NEXI_SCMS.git",
+      "technologies": ["Node.js", "React", "MySQL", "Express"],
+      "live_link": null
+    },
+    {
+      "id": "holiday-life-travel",
+      "title": "Holiday Life - Travel Website",
+      "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true",
+      "description": "A Business to Consumer travel website developed for lushWare-Org as a group project. The platform enables users to browse and book travel packages, hotels, and activities. Features include user registration, booking management, payment integration, and responsive design for optimal user experience across all devices.",
+      "github_link": null,
+      "technologies": ["React", "MongoDB", "Node.js", "Express"],
+      "live_link": "https://holidaylife.travel/"
+    },
     {
       "id": "nano-processor",
       "title": "Nano-Processor",
       "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/basys-3-0.png?raw=true",
       "description": "The assigned lab task is to design and develop a 4-bit nanoprocessor capable of executing 4 instructions. This includes several components that need to be developed or extended from the previous labs and this is a group project for Computer Organization and Digital Design module for semester 2. We used Vivado to all the coding and simulation works.",
-      "github_link": "https://github.com/vihanga02/Nano-Processor.git"
+      "github_link": "https://github.com/vihanga02/Nano-Processor.git",
+      "technologies": ["VHDL", "Vivado", "FPGA", "Digital Design"],
+      "live_link": null
     },
     {
       "id": "grocery-shop",
       "title": "POS System",
       "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/benefits-supermarket-1024x683.jpg?raw=true",
       "description": "Required to develop a program to manage an online shopping system. The shopkeepers can login to the system and add new items and edit current items which are available in the shop. Customers can login to the system and track their current shopping cart. Backend is developed by Java and GUI is developed using JavaFX.",
-      "github_link": "https://github.com/vihanga02/Grocery_shop_System.git"
+      "github_link": "https://github.com/vihanga02/Grocery_shop_System.git",
+      "technologies": ["Java", "JavaFX", "MySQL", "OOP"],
+      "live_link": null
     },
     {
-      "id": "dummy-project",
-      "title": "Dummy Project",
+      "id": "portfolio-website",
+      "title": "Portfolio Website",
       "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true",
-      "description": "This is a dummy project to test the web page. I add this to increase the number of project divs on this page for testing purposes. In future, I will add more projects to this section and remove these dummy projects. I hope now you know enough about this now. Enjoy my page.",
-      "github_link": ""
+      "description": "A modern, responsive portfolio website built with React and Framer Motion. Features a premium glassmorphism design with smooth animations and interactive elements. Showcases my skills, projects, and provides a professional way to connect with potential clients and employers.",
+      "github_link": "https://github.com/vihanga02/my_portfolio.git",
+      "technologies": ["React", "JavaScript", "CSS3", "Framer Motion"],
+      "live_link": "https://vihanga-portfolio.vercel.app"
     }
   ]
-  

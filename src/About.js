@@ -1,170 +1,382 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const aboutScale = {
-    hidden: {
-        opacity: 0.5,
-        y: 200
-    },
+const containerVariants = {
+    hidden: { opacity: 0 },
     visible: {
-        opacity: 0.7,
-        scale: 0.9,
-        y: 0,
-        transition: {
-            duration: 0.3,
-            type: 'tween'
-        }
-    },
-    hover: {
-        scale: 1,
         opacity: 1,
-        zIndex: 10,
-        backgroundColor: 'rgb(22, 24, 41)',
-        boxShadow: "0px 0px 8px rgb(255,255,255)",
         transition: {
-            duration: 0.3,
-        },
-    },
-}
+            duration: 1,
+            staggerChildren: 0.3
+        }
+    }
+};
 
-const h1Variant = {
-    hidden: {
-        opacity: 0.5,
-        y: 200
-    },
+const sectionVariants = {
+    hidden: { opacity: 0, y: 40 },
     visible: {
-        opacity: 1, // Ensure opacity is 1 when in view
-        scale: 1,
+        opacity: 1,
         y: 0,
         transition: {
-            duration: 0.3,
-            type: 'tween'
+            duration: 0.8,
+            ease: "easeOut"
         }
-    },
+    }
 };
 
 const About = () => {
-
     return (
-        <div className="about-content">
+        <motion.div 
+            className="about"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            style={{
+                padding: '2rem 2rem 6rem',
+                maxWidth: '1200px',
+                margin: '0 auto',
+                position: 'relative'
+            }}
+        >
             <motion.h1
-                variants={h1Variant}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{once: true}}
+                variants={sectionVariants}
+                className="gradient-text"
+                style={{
+                    textAlign: 'center',
+                    marginBottom: '3rem',
+                    fontSize: 'clamp(2.8rem, 6vw, 4.5rem)',
+                    fontWeight: '800',
+                    lineHeight: '1.1'
+                }}
             >
-                AB<span>OUT </span>
+                About Me
             </motion.h1>
-            <motion.div  className="about-1 about"
-                variants={aboutScale}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{once: true}}
-                whileHover= 'hover'
-                whileTap='hover'
-            >
-                <h2>Hi there,</h2>
-                <p>
-                I am a 22-year-old passionate developer from Galle, Sri Lanka. I am currently studying web development and app backend development.  I love to learn new things and do my best at anything that I do.
-                </p>
-                <p>
-                In my free time, I love to travel with my friends and play cricket and football. I love to do new projects and gain knowledge and experience. So feel free to drop me a message.
-                </p>
-            </motion.div >
-            <motion.div className="about-2 about"
-                variants={aboutScale}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{once: true}}
-                whileHover= 'hover'
-                whileTap='hover'
-            >
-                <h2>Education</h2>
-                <div className="school">
-                    <p className="time">2008-2021</p>
-                    <p className="institute"><a href="https://www.richmondcollege.lk/">Richmond College</a></p>
-                    <div className="exams">
+
+            <div style={{
+                display: 'grid',
+                gap: '3rem',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))'
+            }}>
+                {/* Personal Info */}
+                <motion.div 
+                    className="about-section glass-card liquid-glass premium-card"
+                    variants={sectionVariants}
+                    style={{
+                        padding: '3rem',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '2rem'
+                    }}
+                >
+                    <h2 style={{
+                        fontSize: '2.4rem',
+                        fontWeight: '700',
+                        color: '#4682A9',
+                        marginBottom: '0.5rem'
+                    }}>
+                        Hi there
+                    </h2>
+                    <p style={{
+                        fontSize: '1.1rem',
+                        lineHeight: '1.8',
+                        color: '#749BC2',
+                        marginBottom: '1rem'
+                    }}>
+                        I am a 22-year-old passionate developer from Galle, Sri Lanka. I am currently studying web development and app backend development. I love to learn new things and do my best at anything that I do.
+                    </p>
+                    <p style={{
+                        fontSize: '1.1rem',
+                        lineHeight: '1.8',
+                        color: '#749BC2'
+                    }}>
+                        In my free time, I love to travel with my friends and play cricket and football. I love to do new projects and gain knowledge and experience. So feel free to drop me a message.
+                    </p>
+                </motion.div>
+
+                {/* Education */}
+                <motion.div 
+                    className="about-section glass-card liquid-glass premium-card"
+                    variants={sectionVariants}
+                    style={{
+                        padding: '3rem',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '2rem'
+                    }}
+                >
+                    <h2 style={{
+                        fontSize: '2.4rem',
+                        fontWeight: '700',
+                        color: '#4682A9',
+                        marginBottom: '0.5rem'
+                    }}>
+                        Education 
+                    </h2>
+                    
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                         <div>
-                            <p className="passes">3A pasees</p>
-                            <p>2021 Advanced Level (Physical Science).</p>
-                            <p>Island Rank: 14</p>
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                marginBottom: '1rem'
+                            }}>
+                                <span style={{
+                                    fontSize: '1rem',
+                                    color: '#91C8E4',
+                                    fontWeight: '600',
+                                    padding: '0.5rem 1rem',
+                                    background: 'rgba(145, 200, 228, 0.1)',
+                                    borderRadius: '20px',
+                                    border: '1px solid rgba(145, 200, 228, 0.2)'
+                                }}>
+                                    2008-2021
+                                </span>
+                                <a href="https://www.richmondcollege.lk/" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   style={{
+                                       color: '#4682A9',
+                                       textDecoration: 'none',
+                                       fontWeight: '700',
+                                       fontSize: '1.2rem',
+                                       transition: 'color 0.3s ease'
+                                   }}
+                                   onMouseEnter={(e) => e.target.style.color = '#749BC2'}
+                                   onMouseLeave={(e) => e.target.style.color = '#4682A9'}
+                                >
+                                    Richmond College
+                                </a>
+                            </div>
+                            <div style={{ marginLeft: '1.5rem' }}>
+                                <p style={{
+                                    fontSize: '1rem',
+                                    color: '#749BC2',
+                                    marginBottom: '0.8rem',
+                                    fontWeight: '500'
+                                }}>
+                                    3A passes - 2021 Advanced Level (Physical Science)
+                                    <p style={{
+                                        fontSize: '1rem',
+                                        color: '#91C8E4',
+                                        marginBottom: '0.8rem',
+                                        fontWeight: '500',
+                                        paddingLeft: '6rem'
+                                    }}>
+                                        Island Rank: 14
+                                    </p>
+                                </p>
+                                <p style={{
+                                    fontSize: '1rem',
+                                    color: '#749BC2',
+                                    fontWeight: '500'
+                                }}>
+                                    9A passes - 2018 Ordinary Level
+                                </p>
+                            </div>
                         </div>
+
                         <div>
-                            <p className="passes">9A passes.</p>
-                            <p>2028 Ordinary Level</p>
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                marginBottom: '1rem'
+                            }}>
+                                <span style={{
+                                    fontSize: '1rem',
+                                    color: '#91C8E4',
+                                    fontWeight: '600',
+                                    padding: '0.5rem 1rem',
+                                    background: 'rgba(145, 200, 228, 0.1)',
+                                    borderRadius: '20px',
+                                    border: '1px solid rgba(145, 200, 228, 0.2)'
+                                }}>
+                                    Since 2023
+                                </span>
+                                <a href="https://uom.lk/" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   style={{
+                                       color: '#4682A9',
+                                       textDecoration: 'none',
+                                       fontWeight: '700',
+                                       fontSize: '1.2rem',
+                                       transition: 'color 0.3s ease'
+                                   }}
+                                   onMouseEnter={(e) => e.target.style.color = '#749BC2'}
+                                   onMouseLeave={(e) => e.target.style.color = '#4682A9'}
+                                >
+                                    University of Moratuwa
+                                </a>
+                            </div>
+                            <p style={{
+                                fontSize: '1rem',
+                                color: '#749BC2',
+                                marginLeft: '1.5rem',
+                                fontWeight: '500'
+                            }}>
+                                BSc (hons) in Computer Science and Engineering
+                            </p>
+                            <p style={{ color: '#91C8E4', marginLeft: '1.5rem' }}>(Data Science Stream)</p>
                         </div>
-                        
                     </div>
-                </div>
-                <div className="university">
-                    <p className="time">since-2023</p>
-                    <p className="institute"><a href="https://uom.lk/">University of Moratuwa</a></p>
-                    <p className="degree">BSc (hons) in Computer Science and Engineering</p>
-                </div>
+                </motion.div>
+            </div>
+
+            {/* Skills Section */}
+            <motion.div
+                variants={sectionVariants}
+                style={{
+                    marginTop: '5rem'
+                }}
+            >
+                <h2 style={{
+                    textAlign: 'center',
+                    fontSize: 'clamp(2rem, 4vw, 3rem)',
+                    fontWeight: '700',
+                    color: '#4682A9',
+                }}>
+                    Skills & Technologies
+                </h2>
+                
+                <div style={{
+                    padding: '2.5rem',
+                    textAlign: 'center',
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    borderRadius: '20px',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    backdropFilter: 'blur(10px)'
+                    }}>
+
+                    <div style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: '2rem',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
+                        {/* React */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#61DAFB">
+                                <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89s-.84 1.85-1.87 1.85-1.87-.82-1.87-1.85.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 0 1-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9s-1.17 0-1.71.03c-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03s1.17 0 1.71-.03c.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72H11.41c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68s-1.83 2.93-4.37 3.68c.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.37 1.95-1.47-.84-1.63-3.05-1.01-5.63-2.54-.75-4.37-1.99-4.37-3.68s1.83-2.93 4.37-3.68c-.62-2.58-.46-4.79 1.01-5.63 1.46-.84 3.45.12 5.37 1.95 1.92-1.83 3.91-2.79 5.37-1.95z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>React</span>
+                        </div>
+
+                        {/* JavaScript */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#F7DF1E">
+                                <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>JavaScript</span>
+                        </div>
+
+                        {/* TypeScript */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#3178C6">
+                                <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>TypeScript</span>
+                        </div>
+
+                        {/* Node.js */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#339933">
+                                <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.570,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>Node.js</span>
+                        </div>
+
+
+                        {/* Java */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#ED8B00">
+                                <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>Java</span>
+                        </div>
+
+                        {/* Python */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#3776AB">
+                                <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>Python</span>
+                        </div>
+
+                        {/* React Native */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#61DAFB">
+                                <path d="M12 9.861A2.139 2.139 0 1 0 12 14.139 2.139 2.139 0 1 0 12 9.861zM6.008 16.255l-.472-.12C2.018 15.246 0 13.737 0 11.996s2.018-3.25 5.536-4.139l.472-.119.133.468a23.53 23.53 0 0 0 1.363 3.578l.101.213-.101.213a23.307 23.307 0 0 0-1.363 3.578l-.133.467zM5.317 8.95c-2.674.751-4.315 1.9-4.315 3.046 0 1.145 1.641 2.294 4.315 3.046a24.95 24.95 0 0 1 1.182-3.046A24.752 24.752 0 0 1 5.317 8.95zM17.992 16.255l-.133-.469a23.357 23.357 0 0 0-1.364-3.577l-.101-.213.101-.213a23.42 23.42 0 0 0 1.364-3.578l.133-.468.473.119c3.517.889 5.535 2.398 5.535 4.14s-2.018 3.25-5.535 4.139l-.473.12zm-.491-4.259c.48 1.039.877 2.06 1.182 3.046 2.675-.752 4.315-1.901 4.315-3.046 0-1.146-1.641-2.294-4.315-3.046a24.788 24.788 0 0 1-1.182 3.046zM5.31 8.945l-.133-.467C4.188 4.992 4.488 2.494 6 1.622c1.483-.856 3.864.155 6.359 2.716l.34.349-.34.349a23.552 23.552 0 0 0-2.422 2.967l-.135.193-.235.02a23.657 23.657 0 0 0-3.785.61l-.472.119zm1.896-6.63c-.268 0-.505.058-.705.173-.994.573-1.17 2.565-.485 5.253a25.122 25.122 0 0 1 3.233-.501 24.847 24.847 0 0 1 2.052-2.544c-1.56-1.519-3.037-2.381-4.095-2.381zM16.795 22.677c-.001 0-.001 0 0 0-1.425 0-3.255-1.073-5.154-3.023l-.34-.349.34-.349a23.53 23.53 0 0 0 2.421-2.968l.135-.193.234-.02a23.63 23.63 0 0 0 3.787-.609l.472-.119.134.468c.987 3.484.688 5.983-.824 6.854a2.38 2.38 0 0 1-1.205.308zm-4.096-3.381c1.56 1.519 3.037 2.381 4.095 2.381h.001c.267 0 .505-.058.704-.173.994-.573 1.171-2.566.485-5.254a25.02 25.02 0 0 1-3.234.501 24.674 24.674 0 0 1-2.051 2.545zM18.69 8.945l-.472-.119a23.479 23.479 0 0 0-3.787-.61l-.234-.02-.135-.193a23.414 23.414 0 0 0-2.421-2.967l-.34-.349.34-.349C14.135 1.778 16.515.767 18 1.622c1.512.872 1.812 3.37.824 6.855l-.134.468zM14.75 7.24c1.142.104 2.227.273 3.234.501.686-2.688.509-4.68-.485-5.253-.988-.571-2.845.304-4.8 2.208A24.849 24.849 0 0 1 14.75 7.24zM7.206 22.677A2.38 2.38 0 0 1 6 22.369c-1.512-.871-1.812-3.369-.823-6.854l.132-.468.472.119c1.155.291 2.429.496 3.785.609l.235.02.134.193a23.596 23.596 0 0 0 2.422 2.968l.34.349-.34.349c-1.898 1.95-3.728 3.023-5.151 3.023zm-1.19-6.427c-.686 2.688-.509 4.681.485 5.254.987.563 2.843-.305 4.8-2.208a24.998 24.998 0 0 1-2.052-2.545 25.049 25.049 0 0 1-3.233-.501zM12 16.878c-.823 0-1.669-.036-2.516-.106l-.235-.02-.135-.193a30.388 30.388 0 0 1-1.35-2.122 30.354 30.354 0 0 1-1.166-2.228l-.1-.213.1-.213a30.3 30.3 0 0 1 1.166-2.228c.414-.716.869-1.43 1.35-2.122l.135-.193.235-.02a30.031 30.031 0 0 1 5.032 0l.234.02.134.193a30.318 30.318 0 0 1 2.517 4.35l.101.213-.101.213a30.363 30.363 0 0 1-2.517 4.35l-.134.193-.234.02c-.847.07-1.694.106-2.517.106zm-2.197-1.084c1.48.111 2.914.111 4.395 0a29.006 29.006 0 0 0 2.196-3.798 28.585 28.585 0 0 0-2.197-3.798 29.031 29.031 0 0 0-4.394 0 28.477 28.477 0 0 0-2.197 3.798 29.114 29.114 0 0 0 2.197 3.798z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>React Native</span>
+                        </div>
+
+                        {/* Flutter */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#02569B">
+                                <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.159 11.211L11.3 14.375 4.07 21.613l2.864 2.387 10.73-10.73-3.191-2.058z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>Flutter</span>
+                        </div>
+
+                        {/* Next.js */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 128 128" fill="none">
+                                <rect width="128" height="128" rx="64" fill="white"/>
+                                <rect width="128" height="128" rx="64" fill="black"/>
+                                <path 
+                                    fillRule="evenodd" 
+                                    clipRule="evenodd" 
+                                    d="M20.4 0h87.2C120.175 0 128 7.825 128 20.4v87.2c0 12.575-7.825 20.4-20.4 20.4H20.4C7.825 128 0 120.175 0 107.6V20.4C0 7.825 7.825 0 20.4 0zM64 106.667c23.564 0 42.667-19.103 42.667-42.667S87.564 21.333 64 21.333 21.333 40.436 21.333 64s19.103 42.667 42.667 42.667z" 
+                                    fill="black"
+                                />
+                                <path 
+                                    d="M106.2 22.9001H21.8C9.74903 22.9001 0 32.6491 0 44.7001V83.3001C0 95.3511 9.74903 105.1 21.8 105.1H106.2C118.251 105.1 128 95.3511 128 83.3001V44.7001C128 32.6491 118.251 22.9001 106.2 22.9001Z" 
+                                    fill="black"
+                                />
+                                <path 
+                                    d="M64.1302 96.8L76.2702 81.7001L53.8202 31.1001H40.1802L64.1302 96.8Z" 
+                                    fill="white"
+                                />
+                                <path 
+                                    d="M89.6002 31.1001H76.1002L64.1002 52.1001L89.6002 96.8001H103.1L77.8002 52.8001L89.6002 31.1001Z" 
+                                    fill="white"
+                                />
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>Next.js</span>
+                        </div>
+
+                        {/* MySQL */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 128 128" fill="none">
+                                <path 
+                                    d="M116.948 97.807c-6.863-.187-12.104.452-16.585 2.341-1.273.537-3.305.552-3.513 2.147.7.733.809 1.829 1.365 2.731 1.07 1.73 2.876 4.052 4.488 5.268 1.762 1.33 3.577 2.751 5.465 3.902 3.358 2.047 7.107 3.217 10.34 5.268 1.906 1.21 3.799 2.733 5.658 4.097.92.675 1.537 1.724 2.732 2.147v-.194c-.628-.801-.78-1.931-1.366-2.928l-2.537-2.537c-2.48-3.292-5.629-6.184-8.976-8.585-2.669-1.916-8.642-4.504-9.755-7.609l-.195-.195c1.892-.214 4.107-.898 5.854-1.367 2.934-.786 5.556-.583 8.585-1.365l4.097-1.171v-.78c-1.531-1.571-2.623-3.651-4.292-5.073-4.37-3.72-9.138-7.437-14.048-10.537-2.724-1.718-6.089-2.835-8.976-4.292-.971-.491-2.677-.746-3.318-1.562-1.517-1.932-2.342-4.382-3.511-6.633-2.449-4.717-4.854-9.868-7.024-14.831-1.48-3.384-2.447-6.72-4.293-9.756-8.86-14.567-18.396-23.358-33.169-32-3.144-1.838-6.929-2.563-10.929-3.513-2.145-.129-4.292-.26-6.438-.391-1.311-.546-2.673-2.149-3.902-2.927C17.811 4.565 5.257-2.16 1.633 6.682c-2.289 5.581 3.421 11.025 5.462 13.854 1.434 1.982 3.269 4.207 4.293 6.438.674 1.467.79 2.938 1.367 4.489 1.417 3.822 2.652 7.98 4.487 11.511.927 1.788 1.949 3.67 3.122 5.268.718.981 1.951 1.413 2.145 2.927-1.204 1.686-1.273 4.304-1.95 6.44-3.05 9.615-1.899 21.567 2.537 28.683 1.36 2.186 4.567 6.871 8.975 5.073 3.856-1.57 2.995-6.438 4.098-10.732.249-.973.096-1.689.585-2.341v.195l3.513 7.024c2.6 4.187 7.212 8.562 11.122 11.514 2.027 1.531 3.623 4.177 6.244 5.073v-.196h-.195c-.508-.791-1.303-1.119-1.951-1.755-1.527-1.497-3.225-3.358-4.487-5.073-3.556-4.827-6.698-10.11-9.561-15.609-1.368-2.627-2.557-5.523-3.709-8.196-.444-1.03-.438-2.589-1.364-3.122-1.263 1.958-3.122 3.542-4.098 5.854-1.561 3.696-1.762 8.204-2.341 12.878-.331.021-.167.006-.391.195-2.718-.655-3.672-3.452-4.683-5.853-2.554-6.07-3.029-15.842-.781-22.829.582-1.809 3.21-7.501 2.146-9.172-.508-1.666-2.184-2.63-3.121-3.903-1.161-1.574-2.319-3.646-3.124-5.464-2.09-4.731-3.066-10.044-5.267-14.828-1.053-2.287-2.832-4.602-4.293-6.634-1.617-2.253-3.429-3.912-4.683-6.635-.446-.968-1.051-2.518-.391-3.513.21-.671.508-.951 1.171-1.17 1.132-.873 4.284.29 5.462.779 3.129 1.3 5.741 2.538 8.392 4.294 1.271.844 2.559 2.475 4.097 2.927h1.756c2.747.631 5.824.195 8.391.975 4.536 1.378 8.601 3.523 12.292 5.854 11.246 7.102 20.442 17.21 26.732 29.269 1.012 1.942 1.45 3.794 2.341 5.854 1.798 4.153 4.063 8.426 5.852 12.488 1.786 4.052 3.526 8.141 6.05 11.513 1.327 1.772 6.451 2.723 8.781 3.708 1.632.689 4.307 1.409 5.854 2.34 2.953 1.782 5.815 3.903 8.586 5.855 1.383.975 5.64 3.116 5.852 4.879zM29.729 23.992c-1.393-.007-2.405.324-3.513.585v.195h.195c.683 1.402 1.888 2.306 2.731 3.513.65 1.367 1.301 2.732 1.952 4.097l.194-.193c1.209-.853 1.762-2.214 1.756-4.294-.484-.509-.555-1.147-.975-1.755-.556-.811-1.549-1.26-2.34-1.951v-.197z" 
+                                    fill="#00758F"
+                                />
+                                <path 
+                                    d="M114.168 87.075c-1.001-.019-1.835.069-2.537.195-2.043.368-3.008 1.043-3.513 1.755.195.195.39.39.585.585 1.043.975 2.731 1.267 3.513 2.341.975 1.359 1.95 2.926 2.927 4.293.195-.195.39-.39.585-.585-.195-.683-.781-1.171-1.171-1.756-.39-.975-.78-1.95-1.17-2.926-.195-.39-.39-.78-.585-1.17-.195-.39-.39-.78-.585-1.17-.195-.195-.39-.39-.585-.585z" 
+                                    fill="#00758F"
+                                />
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>MySQL</span>
+                        </div>
+
+
+                        {/* MongoDB */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="#47A248">
+                                <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/>
+                            </svg>
+                            <span style={{ color: '#4682A9', fontSize: '0.9rem', fontWeight: '600' }}>MongoDB</span>
+                        </div>
+                    </div>
+                    </div>
             </motion.div>
-            <motion.div  className="about-3 about"
-                variants={aboutScale}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{once: true}}
-                whileHover= 'hover'
-                whileTap='hover'
-            >
-                <h2>Skills</h2>
-                <div className="skills">
-                    <div className="tech-skills">
-                        <h3>Tech Skills</h3>
-                        <div className="language-logo">
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/python.svg" alt="python" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/java.svg" alt="java" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/c-plus-plus.svg" alt="cpp" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/react-javascript-js-framework-facebook.svg" alt="react" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/javascript.svg" alt="js" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/html-5.svg" alt="html" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/css-3.svg" alt="css" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/git.svg" alt="git" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/intellij-idea.svg" alt="intellij" />
-                            <img src="https://raw.githubusercontent.com/vihanga02/my_portfolio/cb2bba3edb26a80c053193ede377c6f760ece5c8/src/img/vs-code.svg" alt="vs" />
-                        </div>
-                    </div>
-                    <div className="language-skils">
-                        <h3>Language Skills</h3>
-                        <ul>
-                            <li>English</li>
-                            <li>Sinhala</li>
-                        </ul>
-                    </div>
-                    <div className="other-skills">
-                        <h3>Other Skills</h3>
-                        <ul>
-                            <li>HR Management</li>
-                            <li>Social Services</li>
-                            <li>Volunteering</li>
-                            <li>Leadership</li>
-                        </ul>
-                    </div>
-                </div>
-            </motion.div >
-            <motion.div  className="about-4 about"
-                variants={aboutScale}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{once: true}}
-                whileHover= 'hover'
-                whileTap='hover'
-            >
-                <h2>Experience</h2>
-                <ul>
-                    <li>Main coordinator of R2U workshop program 2022</li>
-                    <li>Former Vice secretary of Richmond College Scociel service society</li>
-                    <li>Member of Ephilogue'23 Logistic Commitee</li>
-                    <li>Member of IESL Student Branch, University of Moratuwa</li>
-                    <li>All island art competition participation</li>
-                    <li>Volunteer at Sasnaka Sansada Foundation</li>
-                </ul>
-            </motion.div >
-        </div >
+        </motion.div>
     );
-}
+};
 
 export default About;

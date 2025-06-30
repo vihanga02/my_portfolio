@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
-import NavBar from './NavBar';
 import Footer from './Footer';
+import './App.css';
 import { Helmet } from 'react-helmet';
 
 function App() {
@@ -13,11 +14,12 @@ function App() {
     <Router>
       <div className="App">
         <Helmet>
-          <title>VM02</title>
+          <title>Vihanga Muthumala - Portfolio</title>
+          <meta name="description" content="Full-stack developer portfolio showcasing modern web applications and mobile development projects." />
         </Helmet>
         <NavBar />
-        <div className="content">
-        <section id="home">
+        <main>
+          <section id="home">
             <Home />
           </section>
           <section id="about">
@@ -29,7 +31,7 @@ function App() {
           <section id="contact">
             <Contact />
           </section>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>
