@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -25,11 +26,14 @@ const itemVariants = {
 };
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
 
     const handleChange = (e) => {
         setFormData({
@@ -38,14 +42,44 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
+    // Define the openWhatsApp function using environment variable
+    const openWhatsApp = () => {
+      const phoneNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
+      const message = "Hi! I'd like to get in touch with you.";
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
     };
 
-    const openWhatsApp = () => {
-        const message = encodeURIComponent("Hi Vihanga! I'd like to connect with you regarding a project opportunity.");
-        window.open(`https://wa.me/94763121937?text=${message}`, '_blank');
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+
+        try {
+          // Use environment variables for EmailJS
+          await emailjs.send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            {
+              from_name: formData.name,
+              from_email: formData.email,
+              message: formData.message,
+              to_email: process.env.REACT_APP_CONTACT_EMAIL
+            },
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          );
+
+          setSubmitStatus('success');
+          setFormData({ name: '', email: '', message: '' });
+        } catch (error) {
+          console.error('Error sending email:', error);
+          setSubmitStatus('error');
+        } finally {
+          setIsSubmitting(false);
+          // Clear status after 3 seconds
+          setTimeout(() => setSubmitStatus(''), 3000);
+        }
     };
 
     return (
