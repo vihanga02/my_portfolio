@@ -759,6 +759,13 @@ html {
     background: linear-gradient(135deg, #A1EEBD, #128C7E);
 }
 
+.phone-icon, .address-icon {
+  background-color: var(#4682A9, #749BC2); /* same as personal-email-icon */
+}
+.phone-icon svg, .address-icon svg {
+  stroke: white;
+}
+
 .contact-info-text {
   flex: 1;
 }
