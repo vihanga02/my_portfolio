@@ -139,7 +139,6 @@ const Contact = () => {
                             </div>
                         </motion.div>
 
-                        {/* Work Email */}
                         <motion.div
                             className="contact-info-item"
                             whileHover={{ scale: 1.02, boxShadow: '0 8px 25px rgba(70, 130, 169, 0.15)' }}
@@ -152,13 +151,50 @@ const Contact = () => {
                             </div>
                             <div className="contact-info-text">
                                 <p className="contact-info-title">Work Email</p>
-                                <a href="mailto:210416V@uom.lk" className="contact-info-link">
-                                    210416V@uom.lk
+                                <a href="mailto:vihangamuthumala@cse.mrt.ac.lk" className="contact-info-link">
+                                    vihangamuthumala@cse.mrt.ac.lk
                                 </a>
                             </div>
                         </motion.div>
-                        
-                        {/* WhatsApp */}
+
+                        {/* Phone */}
+                        <motion.div
+                            className="contact-info-item"
+                            whileHover={{ scale: 1.02, boxShadow: '0 8px 25px rgba(70, 130, 169, 0.15)' }}
+                        >
+                            <div className="contact-info-icon-wrapper phone-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div className="contact-info-text">
+                                <p className="contact-info-title">Phone</p>
+                                <div className="contact-info-phone-container">
+                                    <a href="tel:+94763121937" className="contact-info-link">
+                                        +94 76 312 1937
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Address */}
+                        <motion.div
+                            className="contact-info-item"
+                            whileHover={{ scale: 1.02, boxShadow: '0 8px 25px rgba(70, 130, 169, 0.15)' }}
+                        >
+                            <div className="contact-info-icon-wrapper address-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div className="contact-info-text">
+                                <p className="contact-info-title">Address</p>
+                                <span className="contact-info-link">
+                                    443/12, Wakwella Rd, Galle
+                                </span>
+                            </div>
+                        </motion.div>
                         <motion.div
                             className="contact-info-item"
                             whileHover={{ scale: 1.02, boxShadow: '0 8px 25px rgba(70, 130, 169, 0.15)' }}
