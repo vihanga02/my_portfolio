@@ -18,6 +18,24 @@
       "live_link": null
     },
     {
+      "id": "restaurant-service",
+      "title": "Restaurant Service Web App",
+      "image": "https://raw.githubusercontent.com/vihanga02/Restaurant_Service/main/frontend/public/restaurant-service-screenshot.png",
+      "description": "A full-stack restaurant platform featuring a dynamic menu, AI-powered chat assistant for ordering and recommendations, user authentication (customer & admin), and Stripe payment integration. Built with a React + Tailwind CSS frontend, Node.js/Express backend, MongoDB datastore, and Google Generative AI for conversational UX. Fully responsive for desktop & mobile.",
+      "github_link": "https://github.com/vihanga02/Restaurant_Service",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Google Generative AI",
+        "Stripe",
+        "EmailJS"
+      ],
+      "live_link": null
+    },
+    {
       "id": "holiday-life-travel",
       "title": "Holiday Life - Travel Website",
       "image": "https://github.com/vihanga02/my_portfolio/blob/main/src/img/Web-Development-Projects-1-2048x1001.png?raw=true",
