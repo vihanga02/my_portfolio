@@ -133,10 +133,11 @@ const NavBar = () => {
           display: 'none',
           background: 'rgba(145, 200, 228, 0.15)',
           border: '1px solid rgba(145, 200, 228, 0.3)',
-          borderRadius: '12px',
+          borderRadius: '20px',
           padding: '0.8rem',
           cursor: 'pointer',
-          color: '#4682A9'
+          color: '#4682A9',
+          marginRight: '0.4rem',
         }}
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -155,10 +156,10 @@ const NavBar = () => {
             animate="visible"
             exit="hidden"
             style={{
+              width: '40%',
               position: 'absolute',
               top: '100%',
-              left: '1rem',
-              right: '1rem',
+              right: 0,
               padding: '1.5rem',
               marginTop: '1rem',
               borderRadius: '20px',

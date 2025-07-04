@@ -62,7 +62,7 @@ const About = () => {
                     className="about-section glass-card liquid-glass premium-card"
                     variants={sectionVariants}
                     style={{
-                        padding: '3rem',
+                        padding: '2rem',
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '2rem'
@@ -98,7 +98,7 @@ const About = () => {
                     className="about-section glass-card liquid-glass premium-card"
                     variants={sectionVariants}
                     style={{
-                        padding: '3rem',
+                        padding: '2rem',
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '2rem'
@@ -161,9 +161,9 @@ const About = () => {
                                         color: '#91C8E4',
                                         marginBottom: '0.8rem',
                                         fontWeight: '500',
-                                        paddingLeft: '6rem'
+                                        paddingLeft: '6rem',
                                     }}>
-                                        Island Rank: 14
+                                        Island-Rank: 14
                                     </p>
                                 </p>
                                 <p style={{
@@ -183,16 +183,17 @@ const About = () => {
                                 alignItems: 'center',
                                 marginBottom: '1rem'
                             }}>
-                                <span style={{
-                                    fontSize: '1rem',
-                                    color: '#91C8E4',
-                                    fontWeight: '600',
-                                    padding: '0.5rem 1rem',
-                                    background: 'rgba(145, 200, 228, 0.1)',
-                                    borderRadius: '20px',
-                                    border: '1px solid rgba(145, 200, 228, 0.2)'
-                                }}>
-                                    Since 2023
+                                <span
+                                    style={{
+                                            fontSize: '1rem',
+                                            color: '#91C8E4',
+                                            fontWeight: '600',
+                                            padding: '0.5rem 1rem',
+                                            background: 'rgba(145, 200, 228, 0.1)',
+                                            borderRadius: '20px',
+                                            border: '1px solid rgba(145, 200, 228, 0.2)'
+                                        }}>
+                                    2023-2025
                                 </span>
                                 <a href="https://uom.lk/" 
                                    target="_blank" 
@@ -201,7 +202,7 @@ const About = () => {
                                        color: '#4682A9',
                                        textDecoration: 'none',
                                        fontWeight: '700',
-                                       fontSize: '1.2rem',
+                                       fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
                                        transition: 'color 0.3s ease'
                                    }}
                                    onMouseEnter={(e) => e.target.style.color = '#749BC2'}
@@ -216,9 +217,9 @@ const About = () => {
                                 marginLeft: '1.5rem',
                                 fontWeight: '500'
                             }}>
-                                BSc (hons) in Computer Science and Engineering
+                                BSc (hons) in Computer Science and Engineering<span style={{ color: '#91C8E4', marginLeft: '0.5rem' }}>(Data Science Stream)</span>
                             </p>
-                            <p style={{ color: '#91C8E4', marginLeft: '1.5rem' }}>(Data Science Stream)</p>
+                            
                         </div>
                     </div>
                 </motion.div>
@@ -241,7 +242,7 @@ const About = () => {
                 </h2>
                 
                 <div style={{
-                    padding: '2.5rem',
+                    padding: 'clamp(0.5rem, 5vw, 2.5rem)',
                     textAlign: 'center',
                     background: 'rgba(255, 255, 255, 0.05)',
                     borderRadius: '20px',

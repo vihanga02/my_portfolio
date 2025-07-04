@@ -142,6 +142,7 @@ const Home = () => {
                         className="premium-btn cta-btn"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        style={{ textDecoration: 'none', color: '#4682A9' }}
                     >
                         Get in Touch
                     </motion.a>
