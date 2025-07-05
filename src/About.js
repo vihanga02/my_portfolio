@@ -193,7 +193,7 @@ const About = () => {
                                             borderRadius: '20px',
                                             border: '1px solid rgba(145, 200, 228, 0.2)'
                                         }}>
-                                    2023-2025
+                                    2023-*
                                 </span>
                                 <a href="https://uom.lk/" 
                                    target="_blank" 
